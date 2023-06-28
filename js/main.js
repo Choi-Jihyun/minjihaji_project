@@ -119,4 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($changeTitle.children[8], { left: 1250+ 'px', duration: logoDuration, delay: 6.5 })
 
   }
+
+  
 })

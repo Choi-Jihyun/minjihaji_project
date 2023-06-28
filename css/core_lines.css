@@ -81,7 +81,19 @@ div#core_line_cont{
 }
 
 div#core_line_cont>p{
-  font: bold 40px "AktivGrotesk-Regular";
+  font: normal 40px "AktivGrotesk-Regular";
   color: white;
   text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 3;
+    transform: none;
+  }
 }
