@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marine serre</title>
+  <link rel="stylesheet" href="/minjihaji_project/css/reset.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/common.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/main.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/core_values.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/ecofuturist.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/core_lines.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/sub_lines.css">
+  <link rel="stylesheet" href="/minjihaji_project/css/core_cont.css">
+  <link href='https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Bruno+Ace+SC&family=Dokdo&family=Manrope&family=Noto+Sans+KR&family=Oswald&family=Pacifico&family=Pathway+Gothic+One&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album-rtl/">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js'></script>
+  <script src="/minjihaji_project/js/main.js"></script>
+  <!-- 지현 추가 -->
+  <script src="/minjihaji_project/js/ecofuturist.js"></script> 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/CustomEase.min.js' integrity='sha512-iLvVX+hVp6SsJQ+q7QR9F6SJH9fQ/tNn4H8MbiufALZtSGpxtTGMSjHbYSVVa7KxaYFe4yEjv4PUx7YPP9SpKA==' crossorigin='anonymous'></script>
+</head>
+<body>
+  <section id="wrap">
+    <!-- 지현 헤더 추가 -->
+    <header>
+      <div id="header_bar"></div>
+      <div id="logo">
+        <img src="/minjihaji_project/images/logo.png" alt="마린세르 로고">
+        <h1 id="logo_title">marine serre</h1>
+      </div>
+    </header>
+    <h2 class="hidden">introduce</h2>
+    <!-- 메인 -->
+    <div id="main_wrap">
+      <section id="main">
+        <h3 class="hidden">main</h3>
+
+        <div id="logo_box">
+          <!-- id명 수정 -->
+          <div id="main_logo"><img src="/minjihaji_project/images/main_logo.png"></div><!--로고이미지 추가-->
+          <!-- 지현 -->
+          <div id="logo_svg_wrap">
+            <svg width="362" height="346" viewBox="0 0 362 346" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg_logo"
+                d="M103.5 344C103.5 344 30.0001 313 6.5001 228C6.5001 228 -22.4999 140.5 45.5001 61.5C45.5001 61.5 92 2.5 178 0.500001C178 0.500001 254 -5 311.5 56.5C311.5 56.5 382 120 355.5 228C355.5 228 340.5 304.5 256 345.5C256 345.5 312.5 301.5 308 228C308 228 308 162 241 124C241 124 186.5 91.5 121 124C121 124 60.5 154.5 54 228C54 228 50.5 258 65.5 291.5C65.5 291.5 77.5 319.554 102.5 343.554"
+                stroke="black" />
+            </svg>
+          </div>
+            <!-- 지혜 -->
+            <div id="title">
+              <span id="marineserre_M">M</span><span id="marineserre_A">A</span><span id="marineserre_R">R</span><span
+                id="marineserre_I">I</span><span id="marineserre_N">N</span><span id="marineserre_E">E</span><span
+                id="br">&nbsp;</span><span id="marineserre_S">S</span><span id="marineserre_E2">E</span><span
+                id="marineserre_R2">R</span><span id="marineserre_R3">R</span><span id="marineserre_E3">E</span>
+            </div>
+
+            <div id="changeTitle">
+              <span id="regenerated_R">R</span><span id="regenerated_E">E</span><span id="regenerated_G">G</span><span
+                id="regenerated_E2">E</span><span id="regenerated_N">N</span><span id="regenerated_E3">E</span><span
+                id="regenerated_R2">R</span><span id="regenerated_A">A</span><span id="regenerated_T">T</span><span
+                id="regenerated_E4">E</span><span id="regenerated_D">D</span>
+            </div>
+        </div>
+
+        <div id="scroll_box">
+          <p>Scroll Down</p>
+        </div>
+
+        <div id="position_bar"><!--[지혜수정_0627] position_bar 태그 다지우고 이걸로 바꿔주세요-->
+          <p id="position_line"></p>
+          <ul id="position_ball">
+            <a href="#main"><li></li></a>
+            <a href="#core_values"><li></li></a>
+            <a href="#ecofuturist"><li></li></a>
+            <a href="#core_lines"><li></li></a>
+          </ul>
+          <ul id="position_text">
+            <li id="main_text">Welcome</li>
+            <li id="corevalues_text">Core Values</li>
+            <li id="ecofuturist">ecofuturist</li>
+            <li id="corelines_text">Core Lines</li>
+          </ul>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- 코어밸류 지혜-->
+    <div id="core_values_wrap">
+      <section id="core_values"><!--코어벨류메뉴렙 & 코어벨류 제거함-->
+        <h3 class="hidden">core values</h3>
+        <div id="core_values_title">
+          <p id="title_core">Core</p>
+          <p id="title_values">Values</p>
+          <p id="core_values_text">
+            Regenerate in the lexicon of<br>
+            Marines Serre is:
+          </p>
+        </div>
+        <p id=core_values_line><img src="/minjihaji_project/images/core_values_line.svg"></p><!--line svg추가-->
+        <p id="core_values_star"><img src="/minjihaji_project/images/core_values_star.png"></p><!--별이미지 추가함-->
+
+        <div id="core_values_point_wrap">
+          <section id="core_values_point">
+            <p class="core_values_point_text">MARINESERREREGENERATE</p>
+            <p class="core_values_point_text">MARINESERREREGENERATE</p>
+          </section>
+        </div>
+
+        <div id="coreValues_contents_slide">
+          <ul id="coreValues_contents_card">
+            <li><a href=""><img src="/minjihaji_project/images/core_values_card90_01.png"></a></li>
+            <li><a href=""><img src="/minjihaji_project/images/core_values_card90_02.png"></a></li>
+            <li><a href=""><img src="/minjihaji_project/images/core_values_card90_03.png"></a></li>
+            <li><a href=""><img src="/minjihaji_project/images/core_values_card90_04.png"></a></li>
+            <li><a href=""><img src="/minjihaji_project/images/core_values_card90_05.png"></a></li>
+          </ul>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- 0626 core_cont 페이지 따로 만듦 -하정 -->
+
+    <!-- 에코퓨처리스트 - 지현 -->
+    <div id="ecofuturist_wrap">
+      <section id="ecofuturist">
+        <h3 class="hidden">ecofuturist</h3>
+        <div id="eco_white_bg">
+
+          <div id="ecofuturist_svg_wrap">
+            <div id="ecofuturist_text_svg">
+              <div id="ecofuturist_video">
+                <video id="ecofuturist_video" src="https://player.vimeo.com/progressive_redirect/playback/508786414/rendition/1080p/file.mp4?loc=external&signature=2a5efe4d69be91560c76a6adb408b8e0c1abf9e80cdb72bb89fd0f59c8987960" loop muted autoplay playsinline></video>
+              </div>
+            </div>
+          </div>
+
+          <div id="logo_interaction_wrap">
+            <div id="logo_interaction">
+              <div id="brick"><img src="/minjihaji_project/images/_brick.png"></div>
+              <div id="logo_globe">
+                <div id="logo_globe_spin">
+                  <img src="/minjihaji_project/images/_logo_globe.png">
+                </div>
+              </div>
+              <div id="logo_text_satellite">
+                <p class="logo_texts">
+                  <span class="float_text text_m">hybid</span>
+                  <span class="float_text text_a">ecological</span>
+                  <span class="float_text text_r1">trasformative</span>
+                  <span class="float_text text_i">resilient</span>
+                  <span class="float_text text_n">circularity</span>
+                  <span class="float_text text_e1">feminist</span>
+                  <span class="float_text text_s">realist</span>
+                  <span class="float_text text_e2" style="width:150px">body consious</span>
+                  <span class="float_text text_r2">protective</span>
+                  <span class="float_text text_r3">crafted</span>
+                  <span class="float_text text_e3">autonomous</span>
+                </p>
+              </div>
+              <div id="hole_back"><img src="/minjihaji_project/images/_hole_back.png"></div>
+              <div id="hole_front"><img src="/minjihaji_project/images/_hole_front.png"></div>
+            </div>
+            <div id="blue_wave_border"></div>
+          </div>
+
+          <div id="wave_wrap" class="wave_animation">
+            <div class="waveWrapperInner bg_top">
+              <div class="wave waveTop"></div>
+            </div>
+            <div class="waveWrapperInner bg_middle">
+              <div class="wave waveMiddle"></div>
+            </div>
+            <div class="waveWrapperInner bg_bottom">
+              <div class="wave waveBottom"></div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div id="eco_blue_bg">
+          <div id="ecofuturist_article_wrap">
+            <div id="ecofuturist_article">
+              <div id="ecofuturist_article_stamp">
+                <div class="circle">
+                  <a class="box">
+                    <svg class="box_background box_text-svg" viewBox="0 0 540 540" fill="none">
+                        <path id="circle1"
+                            d="M440 270C440 363.888 363.888 440 270 440C176.112 440 100 363.888 100 270C100 176.112 176.112 100 270 100C363.888 100 440 176.112 440 270Z"
+                            stroke-width="40" />
+                        <text>
+                            <textPath alignment-baseline="middle" href="#circle1" stroke="none" fill=white>
+                                marine serre · regenerated ·
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="box_content">
+                        <img src="/minjihaji_project/images/flower.png">
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div id="ecofuturist_article_text">
+                <p class="text_wrap">
+                  Circularity, for us is the ability to recycle, and to “regenerate” materials that
+                  already exist, defining our Modus Operandi in reducing waste by
+                  reintegrating the end-of-life products into a cyclical process that ensure
+                  transparency and adaptability of our resources.
+                </p>
+                <p class="text_wrap">
+                  Upcycled and recycled materials are at the center of our design process.
+                  Today, around 50% of our collections are composed of upcycled products.
+                  The other half sees us working with innovative and sustainable fibers, such
+                  as biodegradable yarns and recycled fibers.
+                </p>
+              </div>
+              <div id="ecofuturist_article_logo">
+                <div id="logo_spin_wrap">
+                  <img src="/minjihaji_project/images/logo_white.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+
+    <!-- 코어라인 -->
+    <!-- 하정 -->
+    <div id="core_lines_wrap">
+      <section id="core_lines">
+        <h3 class="hidden">core lines</h3>
+        <div id="core_line_inner">
+          <div id="core_line_title">
+            <p id="core">Core</p>
+            <p id="lines">Lines</p>
+          </div>
+          <div id="animation">
+            <svg width="900" height="1" viewBox="0 0 900 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="0.5" x2="900" y2="0.5" stroke="white"/>
+            </svg>
+            <img src="/minjihaji_project/images/gliter.png" alt="반짝이">
+          </div>
+          <div id="core_line_cont">
+            <p>MARINE SERRE's collections are structured over
+              four different lines that, season after season,
+              reflect our creative vision and technical know-how.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 서브라인 -->
+    <div id="sub_lines_wrap">
+      <section id="sub_lines">
+        <h3 class="hidden">sub lines</h3>
+        <div id="sub_lines_main_wrap">
+          <div class="marquee">
+            <span>
+              <a href="/minjihaji_project/sub_broderline.html">Broderline</a>
+              <a href="/minjihaji_project/sub_whiteline.html">Whiteline</a>
+              <a href="/minjihaji_project/sub_goldline.html">Goldline</a>
+              <a href="/minjihaji_project/sub_redline.html">Redline</a>
+            </span>
+            <span>
+              <a href="/minjihaji_project/sub_broderline.html">Broderline</a>
+              <a href="/minjihaji_project/sub_whiteline.html">Whiteline</a>
+              <a href="/minjihaji_project/sub_goldline.html">Goldline</a>
+              <a href="/minjihaji_project/sub_redline.html">Redline</a>
+            </span>
+          </div>
+        </div>
+
+
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* 하정 */
+/* 0627 전체 위치 수정 -하정 */
+/* 0626 전체 크기 수정-하정 */
+div#core_contents_wrap{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  background: #2209e3;
+}
+
+section#core_contents{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+div#core_cont_slide{
+  width: 1920px;
+  height: 970px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  margin-top: -485px;
+  background: #2209e3;
+}
+
+ul#core_cont{
+  width: 100%;
+  height: 100%;
+}
+
+ul#core_cont>li#core_cont_list{
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top: 10%; */
+  
+}
+ 
+p#core_cont_num{
+  width: 155px;
+  height: 188px;
+  position: absolute;
+  left: 120px;
+  top: 150px;
+  font: normal 150px "Sainte Colombe";
+  color: #42ff00;
+  z-index: 999;
+}
+
+/* 0626 하정 이미지 비율과 크기, 위치 수정 */
+li#core_cont_list>img{
+  width: 450px;
+  height: 550px;
+  object-fit: contain;
+  position: absolute;
+  left: 100px;
+  top: 220px;
+}
+
+div#cont_text{
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  left: 720px;
+  top: 300px;
+  /* background: palegoldenrod; */
+}
+
+/* 글자 간격 margin 줌 */
+div#cont_text>p#title{
+  font: normal 80px "Sainte Colombe";
+  color: #42ff00;
+  margin-bottom: 50px;
+}
+
+div#cont_text>p#text{
+  font: normal 24px "AktivGrotesk-Regular";
+  color: white;
+}
+
+div#core_ani>svg:first-child{
+  position: absolute;
+  left: 620px;
+  top: 200px;
+}
+
+div#core_ani>svg:last-child{
+  position: absolute;
+  left: 1420px;
+  top: 201px;
+}
+
+div#core_ani>img{
+  position: absolute;
+  left: 1545px;
+  top: 185px;
+}
+
+section#core_contents>a>img{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 1866px;
+  top: 80px;
+}

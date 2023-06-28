@@ -1,0 +1,74 @@
+a{
+  color:black;
+  text-decoration:none; 
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  position: absolute;
+}
+
+/*스크롤 숨기기*/
+*{
+  margin:0px;
+  padding:0px; 
+}
+
+body,html{
+  height:100%; 
+}
+
+ul,li{
+  list-style:none;
+}
+
+body{
+  -ms-overflow-style: none;  
+}        
+
+body::-webkit-scrollbar {  
+  display: none; 
+}
+
+/* 지현 */
+div#header_bar {
+  width: 100%;
+  height: 10px;
+  background: #42ff00;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+}
+
+div#logo {
+  width: 250px;
+  height: 31px;
+  position: fixed;
+  left: 60px;
+  top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 1000;
+}
+
+div#logo img {
+  width: 25px;
+  height: 25px;
+}
+
+h1#logo_title {
+  width: auto;
+  height: 31px;
+  text-transform: uppercase;
+  font: bold 16px/28px "sainte colombe";
+  letter-spacing: 6px;
+  color: black;
+}
+

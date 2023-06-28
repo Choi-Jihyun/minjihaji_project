@@ -1,0 +1,365 @@
+/* 지현 */
+div#ecofuturist_wrap {
+  min-width: 1920px;
+  /* min-height: 2970px; */
+  height: 350vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+div#eco_white_bg {
+  width: 100%;
+  height: 250vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+div#eco_blue_bg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 0px;
+  right: 0px;
+}
+
+div#ecofuturist_svg_wrap {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 0px;
+}
+
+/* 참고할 사이트
+https://wsss.tistory.com/1310 */
+div#ecofuturist_text_svg {
+  width: 1600px;
+  height: 160px;
+  margin: 0 auto;
+
+  background-image: url('/minjihaji_project/images/ecofuturist_thumbnail.jpg');
+  mask-image: url('/minjihaji_project/images/ecofuturist.svg');
+  mask-repeat: no-repeat;
+  mask-position: 0px 0px; 
+  mask-size: 1600px 160px;
+  -webkit-mask-image: url('/minjihaji_project/images/ecofuturist.svg'); 
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0px 0px; 
+  -webkit-mask-size: 1600px 160px;
+
+  position: absolute;
+  left: 50%;
+  margin-left: -800px;
+  top: 50%;
+  margin-top: -80px;
+}
+
+div#logo_interaction_wrap {
+  width: 100%;
+  height: 150vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+div#logo_interaction {
+  width: 854px;
+  height: 1200px;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  margin-left: -427px;
+}
+
+div#brick {
+  position: absolute;
+  left: 0px;
+  top: 1vh;
+  /* top: 786px; */
+  /* top: 93.5vh; */
+  z-index: 10;
+}
+div#logo_globe {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 470px;
+  z-index: 2;
+}
+div#hole_front {
+  position: absolute;
+  left: 0px;
+  /* top: 858px; */
+  top: 101vh;
+  z-index: 20;
+}
+div#hole_back {
+  position: absolute;
+  left: 0px;
+  /* top: 789px; */
+  top: 93.6vh;
+  z-index: 1;
+}
+.logo_texts {
+  font: normal 20px "aktivGrotes-regular";
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  left: 43%;
+  top: 450px;
+  z-index: 2;
+}
+.logo_texts span {
+  border: solid 1px black;
+  padding: 3px 20px;
+  background: rgba(255,255,255,0.2);
+}
+.float_text {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  color: black;
+} s
+
+.logo_texts .text_m {
+  position: absolute;
+  left: -250px;
+  bottom: -300px;
+}
+.logo_texts .text_a {
+  position: absolute;
+  left: -180px;
+  bottom: -120px;
+}
+.logo_texts .text_r1 {
+  position: absolute;
+  left:40px;
+  bottom: -120px;
+}
+.logo_texts .text_i {
+  position: absolute;
+  left: 50px;
+  bottom: 6px;
+}
+.logo_texts .text_n {
+  position: absolute;
+  left: 110px;
+  bottom: -410px;
+}
+.logo_texts .text_e1 {
+  position: absolute;
+  left: -140px;
+  bottom: 120px;
+}
+.logo_texts .text_s {
+  position: absolute;
+  left: -40px;
+  bottom: -450px;
+}
+.logo_texts .text_e2 {
+  position: absolute;
+  left: -70px;
+  bottom: -260px;
+}
+.logo_texts .text_r2 {
+  position: absolute;
+  left: -180px;
+  bottom: 60px;
+}
+.logo_texts .text_r3 {
+  position: absolute;
+  left: 250px;
+  bottom: -180px;
+}
+.logo_texts .text_e3 {
+  position: absolute;
+  left: 200px;
+  bottom: 140px;
+}
+
+
+
+/* 파도 */
+/* 참고 사이트: https://codepen.io/plavookac/pen/QMwObb */
+#wave_wrap {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20vh;
+  top: 0;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+.bg_top {
+  z-index: 33;
+  opacity: 0.5;
+}
+.bg_middle {
+  z-index: 32;
+  opacity: 0.75;
+}
+.bg_bottom {
+  z-index: 31;
+  opacity: 1;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 130px;
+  background-image: url('/minjihaji_project/images/wave_top.png');
+  animation: move_wave 5s linear infinite;
+  -webkit-animation: move_wave 5s linear infinite;
+}
+.waveMiddle {
+  background-size: 50% 150px;
+  background-image: url('/minjihaji_project/images/wave_mid.png');
+  animation: move_wave 10s linear infinite;
+  -webkit-animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 200px;
+  background-image: url('/minjihaji_project/images/wave_bot.png');
+  animation: move_wave 15s linear infinite;
+  -webkit-animation: move_wave 15s linear infinite;
+}
+
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+
+div#blue_wave_border {
+  width: 100%;
+  /* height: 30vh; */
+  height: 50vh;
+  position: absolute;
+  left: 0px;
+  top: 100vh;
+  background: #2209e3;
+}
+
+/* 아티클 파란 배경 */
+div#ecofuturist_article_wrap {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 20;
+  background: #2209e3;
+  padding: 5%;
+  box-sizing: border-box;
+}
+div#ecofuturist_article {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+
+div#ecofuturist_article_stamp {
+  width: auto;
+  height: auto;
+}
+.box {
+  cursor: pointer;
+  position: relative;
+  left: -5%;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 140px;
+  height: 140px;
+  text-transform: uppercase;
+  font-weight: 800;
+  overflow: hidden;
+}
+.box_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  animation: rotate infinite 11s linear;
+  font: normal 40px "sainte colombe";
+  letter-spacing: 12px;
+}
+.box:hover .box_background {
+  animation-play-state: paused;
+}
+.box:hover .box_content {
+  animation-play-state: paused;
+}
+
+.box_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  animation: reverse_rotate infinite 11s linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reverse_rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+div#ecofuturist_article_text {
+  margin-top: 50px
+}
+
+p.text_wrap {
+  width: 1400px;
+  height: 200px;
+  font: normal 40px "Sainte Colombe";
+  color: white;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -700px;
+  top: 0px;
+  padding-bottom: 70px;
+}
+
+div#ecofuturist_article_logo {
+  width: 54px;
+  height: 51px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+}

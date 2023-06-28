@@ -1,0 +1,87 @@
+/* 하정 */
+/* 0627 글자 간격 수정 -하정 */
+/* 0626 전체 크기 수정 -하정 */
+div#core_lines_wrap{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  background: #2209e3;
+  overflow: hidden;
+}
+
+section#core_lines{
+  min-width: 1920px;
+  height: 100%; 
+  position: relative;
+  left: 0;
+  right: 0;
+}
+div#core_line_inner {
+  min-width: 1920px;
+  height: 90vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+  top: 5vh;
+}
+
+
+div#core_line_title{
+  width: 450px;
+  height: 200px;
+  position: absolute;
+  left: 174px;
+  top: 130px;
+}
+
+p#core{
+  font: bold 150px "Sainte Colombe";
+  color: #2209e3;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+
+p#lines{
+  font: bold 80px "Sainte Colombe";
+  color: white;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+div#animation{
+  width: 950px;
+  height: 30px;
+  position: absolute;
+  left: 638px;
+  top: 205px;
+}
+
+div#animation>svg{
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+div#animation>img{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+div#core_line_cont{
+  width: 990px;
+  height: 160px;
+  position: absolute;
+  left: 478px;
+  top: 480px;
+}
+
+div#core_line_cont>p{
+  font: bold 40px "AktivGrotesk-Regular";
+  color: white;
+  text-align: center;
+}
