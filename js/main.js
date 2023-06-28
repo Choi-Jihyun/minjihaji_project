@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 지현
   const svgPath = document.querySelector("#logo_svg_wrap > svg > path");
-  svgPath.classList.add('animation')
-
 
   //[지혜수정_0627]
   const $logoBox = document.querySelector('#logo_box')
   const $mainTitle = document.querySelector('#title')
   const $changeTitle = document.querySelector('#changeTitle')
   const $mainLogo = document.querySelector('#main_logo')
-
+  const scrollDownText = document.querySelector("#scroll_box > p");
+  const scrollBar = document.querySelector(".scroll_bar");
   let logoDuration = 1;
 
+  activateTitle();
+
+  // 지현
+  // 애니메이션 끝나면 작동하도록 함
+  gsap.set(scrollDownText, {opacity: 0})
   
-
-  $logoBox.addEventListener('click', activateTitle)
-
-  // activateTitle();
+  function scrollDownAni() {
+    gsap.to(scrollDownText, {bottom: -10, duration: 0.4,onComplete: ()=>{
+      gsap.to(scrollDownText, {bottom: 0, duration: 0.5})
+    }})
+  }
 
   function activateTitle() {//0167
 
     gsap.set($changeTitle, { display: 'block', top: 60 + 'px', left: -90 + 'px' })
+    gsap.set(svgPath, {display: 'none'})
     gsap.to($changeTitle.children[10], { left: 1509.88 + 'px', ease: 'power1.out', duration: logoDuration, delay: 0.2 })
 
     gsap.to($mainTitle.children[11], { top: 76 + 'px', duration: logoDuration, delay: 1 })
@@ -116,7 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($changeTitle.children[8], { left: 917+ 'px', duration: logoDuration, delay: 5 })
     gsap.to($changeTitle.children[8], { left: 1344.64 + 'px', duration: logoDuration, delay: 5.5 })
     gsap.to($changeTitle.children[8], { top: 75 + 'px', duration: logoDuration, delay: 6 })
-    gsap.to($changeTitle.children[8], { left: 1250+ 'px', duration: logoDuration, delay: 6.5 })
-
+    gsap.to($changeTitle.children[8], { left: 1250+ 'px', duration: logoDuration, delay: 6.5, onComplete: ()=>{
+      gsap.set(svgPath, {display: 'block'})
+      svgPath.classList.add('animation')
+      setInterval(scrollDownAni, 1600);
+      gsap.to(scrollBar, {height: 70, delay: 1.5})
+      gsap.to(scrollDownText, {opacity: 1, delay: 2.2})
+      
+    }})
   }
+
+  
 })

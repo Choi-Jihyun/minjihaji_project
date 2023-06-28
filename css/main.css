@@ -175,7 +175,7 @@ div#title {
     }
 
     div#changeTitle {
-      font: normal 76px/76px 'Sainte Colombe';
+      font: bold 76px/76px 'Sainte Colombe';
       color: white;
       display: none;
       position: absolute;
@@ -262,22 +262,24 @@ div#title {
       left: 50%;
       margin-left: -61.5px;
     }
-    #scroll_box>p{
+
+    #scroll_box .scroll_down_text {
       width: 123px;
       height: 25px;
-      font: bold 20px/25px 'Sainte Colombe' ;
+      font: bold 20px/25px 'Sainte Colombe';
       color: white;
       position: absolute;
       bottom: 0px;
       text-align: center;
+      opacity: 0;
     }
-    #scroll_box>p::before{
-      content: "";
+    #scroll_box .scroll_bar {
       width: 1px;
-      height: 60px;
+      /* height: 70px; */
+      height: 0px;
       background-color: white;
       position: absolute;
-      top: -70px;
+      top: -50px;
       left: 50%;
     }
 
