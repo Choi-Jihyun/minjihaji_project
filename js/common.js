@@ -60,15 +60,17 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   function scrollWindow(){
     let scrollHeight=window.pageYOffset;
-
+    
     if(scrollHeight>=windowHeight/2 && scrollHeight<windowHeight*1.5){
       checkMenu=1;
-    }else if(scrollHeight>=windowHeight*1.5){
+    }else if(scrollHeight>=windowHeight*1.5 && scrollHeight<windowHeight*2.5){
       checkMenu=2;
-    }else{
+    }else if(scrollHeight>=windowHeight*2.5){
+      checkMenu=3;
+    }
+    else{
       checkMenu=0;
     }
-
     checkPositionBall(checkMenu)
   }
 
