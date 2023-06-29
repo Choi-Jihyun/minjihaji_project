@@ -1,29 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+
+window.addEventListener('load', () => {
   // 지현
   const svgPath = document.querySelector("#logo_svg_wrap > svg > path");
 
   //[지혜수정_0627]
-  const $logoBox = document.querySelector('#logo_box')
   const $mainTitle = document.querySelector('#title')
   const $changeTitle = document.querySelector('#changeTitle')
-  const $mainLogo = document.querySelector('#main_logo')
   const scrollDownText = document.querySelector("#scroll_box > p");
   const scrollBar = document.querySelector(".scroll_bar");
+  const mainPage = document.querySelector("#main");
   let logoDuration = 1;
 
   activateTitle();
+  // scrollDownAuto();
+
+  gsap.set(svgPath, {display: 'block'})
+  svgPath.classList.add('animation')
+  setInterval(scrollDownAni, 1600);
+  gsap.to(scrollBar, {height: 70, delay: 1.5})
+  gsap.to(scrollDownText, {opacity: 1, delay: 2.7})  // delay: 2.2
 
   // 지현
   // 애니메이션 끝나면 작동하도록 함
   gsap.set(scrollDownText, {opacity: 0})
-  
   function scrollDownAni() {
-    gsap.to(scrollDownText, {bottom: -10, duration: 0.4,onComplete: ()=>{
-      gsap.to(scrollDownText, {bottom: 0, duration: 0.5})
+    // 4,5
+    gsap.to(scrollDownText, {bottom: -10, duration: 0.2, onComplete: ()=>{
+      gsap.to(scrollDownText, {bottom: 0, duration: 0.3, onComplete: ()=>{
+        gsap.to(scrollDownText, {bottom: -10, duration: 0.2,onComplete: ()=>{
+          gsap.to(scrollDownText, {bottom: 0, duration: 0.3, })
+        }})
+      }})
     }})
   }
 
-  function activateTitle() {//0167
+  function activateTitle() {
 
     gsap.set($changeTitle, { display: 'block', top: 60 + 'px', left: -90 + 'px' })
     gsap.set(svgPath, {display: 'none'})
@@ -71,8 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($mainTitle.children[7], { left: 1500+ 'px', duration: logoDuration, delay: 4 })
     gsap.to($mainTitle.children[7], { left: 1800 + 'px', duration: logoDuration, delay: 4.5 })
     gsap.to($mainTitle.children[7], { left: 2000 + 'px', duration: logoDuration, delay: 5 })
-    // gsap.to($mainTitle.children[7], { left: 900 + 'px', duration: logoDuration, delay: 5.5 })
-    // gsap.to($mainTitle.children[7], { left: 2000 + 'px', duration: logoDuration, delay: 5.8 })
 
     gsap.to($mainTitle.children[8], { top: -76 + 'px', duration: logoDuration, delay: 2.2 })
     gsap.to($mainTitle.children[8], { left: 893.26 + 'px', duration: logoDuration, delay: 2.5 })
@@ -128,9 +138,35 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(scrollDownAni, 1600);
       gsap.to(scrollBar, {height: 70, delay: 1.5})
       gsap.to(scrollDownText, {opacity: 1, delay: 2.2})
-      
     }})
   }
+
+  // function scrollDownAuto() {
+  //   gsap.to(mainPage, {
+  //     scrollTrigger: {
+  //       trigger: mainPage,
+  //       markers: true,
+  //       start: "top 80%",
+  //       bottom: "bottom 100%"
+  //     }
+  //   })
+  // }
+  
+  // window.addEventListener('scroll', function() {
+  //   let mainSection = document.querySelector('#main_wrap');
+  //   let coreValuesSection = document.querySelector('#core_values_wrap');
+  //   let scrollPosition = window.pageYOffset;
+  //   let mainSectionHeight = mainSection.clientHeight;
+  //   let triggerPositionStart = mainSectionHeight * 0.2;
+  //   let triggerPositionEnd = mainSectionHeight * 0.4;
+
+  
+  //   if (window.pageYOffset >= 300 && window.pageYOffset <= 500) {
+  //     gsap.to(window, {duration: 0.8, top: 1000});
+  //   }
+  // });
+  
+  
 
   
 })

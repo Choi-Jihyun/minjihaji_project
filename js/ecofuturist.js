@@ -104,10 +104,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   })
 
   // logoSpinWrap
+
+  
   let rotation = 100;
   let speed = 20;
-
-  setInterval(smallLogoAnimate, 100); // 10밀리 초마다 animate 함수 실행
 
   function smallLogoAnimate() {
     rotation += speed;

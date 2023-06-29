@@ -100,7 +100,7 @@ ul#coreValues_contents_card{
   justify-content: space-around;
   align-content: center;
 }
-ul#coreValues_contents_card>li{
+ul#coreValues_contents_card > li{
   width: 410px;
   height: 618px; 
   margin:0px auto; 
@@ -110,10 +110,10 @@ ul#coreValues_contents_card>li{
   position: relative;
   top: 150px;
   left: 0px;
-  transform: rotate(0);
+  transform: translate(350, 30)
 }
 
-ul#coreValues_contents_card>li img{
+ul#coreValues_contents_card > li img{
   width: 100%;
 }
 /*poin_text 무한루트 코드*/
