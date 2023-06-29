@@ -175,7 +175,7 @@ div#title {
     }
 
     div#changeTitle {
-      font: normal 76px/76px 'Sainte Colombe';
+      font: bold 76px/76px 'Sainte Colombe';
       color: white;
       display: none;
       position: absolute;
@@ -262,7 +262,7 @@ div#title {
       left: 50%;
       margin-left: -61.5px;
     }
-    #scroll_box>p{
+    p#scroll_text{
       width: 123px;
       height: 25px;
       font: bold 20px/25px 'Sainte Colombe' ;
@@ -271,13 +271,12 @@ div#title {
       bottom: 0px;
       text-align: center;
     }
-    #scroll_box>p::before{
-      content: "";
+    p#scroll_bar{
       width: 1px;
       height: 60px;
       background-color: white;
       position: absolute;
-      top: -70px;
+      top: 0px;
       left: 50%;
     }
 
@@ -330,6 +329,36 @@ div#title {
       transform: rotate(90deg);
       display: none;
     }
+/* 스크롤 다운 모션_지혜
+#scroll_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#scroll_box>p {
+ 
+  cursor: default;
+}
+
+
+#scroll_box>p:hover{
+  animation: bounce 1s linear;
+}
+
+@keyframes bounce {
+  20%, 50%, 80% {
+    transform: translate(0, 0);    
+  }
+  40% {
+    transform: translate(0, -20px);    
+  }
+  70% {
+    transform: translate(0, -10px);    
+  }
+  90% {
+    transform: translate(0, -4px);
+  }
+} */
 
 

@@ -53,8 +53,9 @@ p#core_values_text{
 p#core_values_line{
   width: 848px;
   height: 1px;
+  background-color: black;
   position: absolute;
-  top: 200px;
+  top: 210px;
   left: 720px;
 }
 p#core_values_star{
