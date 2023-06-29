@@ -98,50 +98,68 @@ div#sub_detail_line_cont_text>p#contents{
   font: bold 24px "Sainte Colombe";
 }
 
-div#sub_detail_line_cont_pic{
-  width: 850px;
+section#sub_detail_line_cont_pic_left{
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  right: 695px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: subline_img_left 20s linear infinite;
+}
+section#sub_detail_line_cont_pic_left>img{
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 44px;
+}
+@keyframes subline_img_left{
+  0%{
+    top:0%
+  }
+  100%{
+    top:-100%
+  }
+}
+section#sub_detail_line_cont_pic_left:hover{
+  animation-play-state: paused;
+}
+
+section#sub_detail_line_cont_pic_right{
+  width: 400px;
   height: 100%;
   position: absolute;
   right: 250px;
   top: 0px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  animation: subline_img_right 20s linear infinite;
 }
 
-div#sub_detail_line_cont_pic>img{
+section#sub_detail_line_cont_pic_right>img{
   width: 400px;
   height: 500px;
-  object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 44px;
 }
 
-div#sub_detail_line_cont_pic>img:nth-child(1){
-  position: absolute;
-  left: 0px;
-  top: -340px;
+
+@keyframes subline_img_right{
+  0%{
+    top: -100%;
+  }
+  100%{
+    top: 0%;
+  }
 }
 
-div#sub_detail_line_cont_pic>img:nth-child(2){ 
-  position: absolute;   
-  left: 0px;
-  top: 204px;
-}
-
-div#sub_detail_line_cont_pic>img:nth-child(3){ 
-  position: absolute;   
-  left: 0px;
-  top: 748px;
-}
-
-div#sub_detail_line_cont_pic>img:nth-child(4){ 
-  position: absolute;   
-  right: 0px;
-  top: 10px;
-}
-
-div#sub_detail_line_cont_pic>img:nth-child(5){ 
-  position: absolute;   
-  right: 0px;
-  top: 554px;
+section#sub_detail_line_cont_pic_right:hover{
+  animation-play-state: paused;
 }
 
 button#prev_btn{
