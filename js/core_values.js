@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   gsap.set(titleValue, {display: 'none', opacity: 0, bottom: -11})
   gsap.set(coreValuesText, {display: 'none', opacity: 0, bottom: -100})
   gsap.set(coreValuesCards, {left: 1200, display: 'none'})
-  window.addEventListener('scroll', scrollWindow);
+  window.addEventListener('scroll', scrollCoreValues);
 
-  function scrollWindow() {
+  function scrollCoreValues() {
     let scrollHeight = window.scrollY;
 
     
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       gsap.set(titleCore, {display: 'block'})
       gsap.to(titleCore, {top: 0, opacity:1, duration: 1, ease: "power1.out"})
       gsap.set(titleValue, {display: 'block'})
-      gsap.to(titleValue, {bottom: 89, opacity:1, duration: 1, ease: "power1.out"})
+      gsap.to(titleValue, {delay: 0.2, bottom: 89, opacity:1, duration: 1, ease: "power1.out"})
       gsap.set(coreValuesText, {display: 'block'})
       gsap.to(coreValuesText, {delay: 0.3, bottom: 0, opacity:1, duration: 1, ease: "power1.out", onComplete: ()=>{
         

@@ -19,14 +19,66 @@ section#sub_lines{
 
 /* 0626 간격 조절 */
 div#sub_lines_main_wrap{
-  width: 3300px;
+  /* width: 3300px; */
+  width: 100%;
   height: 198px;
   position: relative;
   left: 0px;
   top: 50%;
   margin-top: -99px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* background: red; */
 }
+
+
+/* 지현 새로운 마크업 */
+div.sub_line_marquee {
+  width: 7000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+ul.sub_line_lists {
+  width: 3500px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  /* background: blue;
+  white-space: nowrap;
+  overflow: hidden; */
+  animation: sub_line_ani 14s linear infinite;
+}
+@keyframes sub_line_ani{
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+div.sub_line_marquee:hover .sub_line_lists{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+ul.sub_line_lists a {
+  font: bold 150px "Sainte Colombe"; 
+  color: black; 
+  transition: color 0.1s ease-out;
+}
+ul.sub_line_lists > li:hover a{
+  color: #2209e3;
+}
+
+
+
+
+
 /* 0626 글자 속도 조절 */
 div.marquee{
   display: block;
@@ -43,7 +95,7 @@ div.marquee{
 div.marquee>span{
   float: left;
   width: 50%;
-  font: bold 150px "Sainte Colombe";  
+  font: bold 150px "Sainte Colombe";
 }
 
 /* 0626글자 간격 조절함 */
@@ -63,7 +115,6 @@ div.marquee>span>a:hover{
 }
 
 
-
 @keyframes sub_line{
   0%{
       left: 0%;
@@ -72,6 +123,8 @@ div.marquee>span>a:hover{
       left: -100%;
   }
 }
+
+
 
 /* 하정 */
 div#sub_detail_line_wrap{
