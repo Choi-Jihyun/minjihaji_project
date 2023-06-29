@@ -308,7 +308,7 @@ div#title {
       justify-content: space-between;
       align-items: flex-start;
     }
-    ul#position_ball>a>li{
+    ul#position_ball>li{
       width: 7px;
       height: 7px;
       border: solid 1px #42ff00;
@@ -322,12 +322,42 @@ div#title {
       background-color: #42ff00;
     }
     ul#position_text{
-      width: 85px;
-      left: 19px;
       font:normal 15px/19px 'Sainte Colombe';
       color: #42ff00;
       transform: rotate(90deg);
+    }
+    #main_text{
+      position: absolute;
+      top: -30px;
+      left: 370px;
       display: none;
+    }
+    #corevalues_text{
+      width: 87px;
+      height: 19px;
+      position: absolute;
+      top: -30px;
+      left: 412px;
+      display: none;
+    }
+    #ecofuturist_text{
+      width: 81px;
+      height: 19px;
+      position: absolute;
+      top: -30px;
+      left: 445px;
+      display: none;
+    }
+    #corelines_text{
+      width: 80px;
+      height: 19px;
+      position: absolute;
+      top: -30px;
+      left: 508px;
+      display: none;
+    }
+    ul#position_text>li.selected{
+      display: block;
     }
 
 
