@@ -262,7 +262,7 @@ div#title {
       left: 50%;
       margin-left: -61.5px;
     }
-    #scroll_box>p{
+     p#scroll_text{
       width: 123px;
       height: 25px;
       font: bold 20px/25px 'Sainte Colombe' ;
@@ -271,13 +271,12 @@ div#title {
       bottom: 0px;
       text-align: center;
     }
-    #scroll_box>p::before{
-      content: "";
+    p#scroll_bar{
       width: 1px;
       height: 60px;
       background-color: white;
       position: absolute;
-      top: -70px;
+      top: 0px;
       left: 50%;
     }
 
