@@ -57,7 +57,7 @@ p#core_cont_num{
 }
 
 /* 0626 하정 이미지 비율과 크기, 위치 수정 */
-li#core_cont_list>img{
+li#core_cont>img{
   width: 450px;
   height: 550px;
   object-fit: contain;
