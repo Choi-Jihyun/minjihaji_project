@@ -13,13 +13,12 @@ window.addEventListener('load', () => {
   let logoDuration = 1;
 
   activateTitle();
-  // scrollDownAuto();
 
-  gsap.set(svgPath, {display: 'block'})
-  svgPath.classList.add('animation')
-  setInterval(scrollDownAni, 1600);
-  gsap.to(scrollBar, {height: 70, delay: 1.5})
-  gsap.to(scrollDownText, {opacity: 1, delay: 2.7})  // delay: 2.2
+  // gsap.set(svgPath, {display: 'block'})
+  // svgPath.classList.add('animation')
+  // setInterval(scrollDownAni, 1600);
+  // gsap.to(scrollBar, {height: 70, delay: 1.5})
+  // gsap.to(scrollDownText, {opacity: 1, delay: 2.7})  // delay: 2.2
 
   // 지현
   // 애니메이션 끝나면 작동하도록 함
@@ -137,7 +136,7 @@ window.addEventListener('load', () => {
       svgPath.classList.add('animation')
       setInterval(scrollDownAni, 1600);
       gsap.to(scrollBar, {height: 70, delay: 1.5})
-      gsap.to(scrollDownText, {opacity: 1, delay: 2.2})
+      gsap.to(scrollDownText, {opacity: 1, delay: 2.7})
     }})
   }
 

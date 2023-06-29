@@ -6,6 +6,8 @@
 }
 #main_wrap{
   width: 100%;
+  /* 지현: 반응형 작업 */
+  height: 100vh;
   height: 970px;
   background-size: cover;
   background-color: #2209e3;
@@ -15,6 +17,7 @@
 }
 #main{
   width: 1920px;
+  /* 지현: 반응형 작업 */
   height: 100%;
   margin: 0px auto;
   position: relative;
