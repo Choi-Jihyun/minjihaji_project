@@ -76,10 +76,9 @@ ul.sub_line_lists > li:hover a{
 }
 
 
+/* 
 
-
-
-/* 0626 글자 속도 조절 */
+하정 이전 마크업
 div.marquee{
   display: block;
   width: 200%;
@@ -98,18 +97,15 @@ div.marquee>span{
   font: bold 150px "Sainte Colombe";
 }
 
-/* 0626글자 간격 조절함 */
 div.marquee>span>a{
   margin-right: 125px;
 }
 
-/* 0627 호버하면 무한루프 정지하게 수정 -하정 */
 div.marquee:hover{
   animation-play-state: paused;
   cursor: pointer;
 }
 
-/* 0627 임시로 색상 지정해서 호버하면 글자색 바뀌게 수정 -하정 */
 div.marquee>span>a:hover{
   color: #2209e3;
 }
@@ -122,7 +118,7 @@ div.marquee>span>a:hover{
   100%{
       left: -100%;
   }
-}
+} */
 
 
 
@@ -197,7 +193,7 @@ div#sub_detail_line_cont_pic>img:nth-child(5){
   top: 554px;
 }
 
-button#prev_btn{
+button.prev_btn{
   background: none;
   border: none;
   position: absolute;
@@ -210,7 +206,7 @@ button#prev_btn{
 }
 
 /* 지현 추가 */
-button#prev_btn:hover {
+button.prev_btn:hover {
   filter: none;
 }
 
