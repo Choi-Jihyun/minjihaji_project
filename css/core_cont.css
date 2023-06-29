@@ -49,20 +49,21 @@ p#core_cont_num{
   width: 155px;
   height: 188px;
   position: absolute;
-  left: 170px;
+  left: 120px;
   top: 150px;
   font: normal 150px "Sainte Colombe";
   color: #42ff00;
   z-index: 999;
 }
 
+
 /* 0626 하정 이미지 비율과 크기, 위치 수정 */
-li#core_cont>img{
+li#core_cont_list>img{
   width: 450px;
   height: 550px;
   object-fit: contain;
   position: absolute;
-  left: 170px;
+  left: 100px;
   top: 220px;
 }
 
@@ -70,10 +71,11 @@ div#cont_text{
   width: 600px;
   height: 300px;
   position: absolute;
-  left: 780px;
+  left: 720px;
   top: 300px;
   /* background: palegoldenrod; */
 }
+
 
 /* 글자 간격 margin 줌 */
 div#cont_text>p#title{
@@ -89,26 +91,26 @@ div#cont_text>p#text{
 
 div#core_ani>svg:first-child{
   position: absolute;
-  left: 670px;
+  left: 620px;
   top: 200px;
 }
 
 div#core_ani>svg:last-child{
   position: absolute;
-  left: 1470px;
+  left: 1420px;
   top: 201px;
 }
 
 div#core_ani>img{
   position: absolute;
-  left: 1595px;
+  left: 1545px;
   top: 185px;
 }
 
-section#core_contents>a>img{
+section#core_contents>img{
   width: 18px;
   height: 18px;
   position: absolute;
-  left: 1816px;
+  left: 1866px;
   top: 80px;
 }
