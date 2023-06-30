@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       gsap.to(coreValuesText, {delay: 0.3, bottom: 0, opacity:1, duration: 1, ease: "power1.out", onComplete: ()=>{
         
       gsap.to(coreValuesLine, {width: 848, duration: 1, onComplete: ()=>{
+        gsap.set(coreValuesStar, {display: "block"})
         gsap.to(coreValuesStar, {rotation: 360, delay: 0.3, onComplete: ()=>{
-          gsap.set(coreValuesStar, {display: "block"})
           for(const item of coreValuesCards){
             gsap.set(item, {display: 'block'})
               gsap.to(item, {left: 0, duration: 2, ease: "none", onComplete: ()=>{

@@ -25,13 +25,13 @@ ul,li{
   list-style:none;
 }
 
-body{
+/* body{
   -ms-overflow-style: none;  
 }        
 
 body::-webkit-scrollbar {  
   display: none; 
-}
+} */
 
 /* 지현 */
 div#header_bar {
