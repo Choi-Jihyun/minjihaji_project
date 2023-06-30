@@ -65,9 +65,15 @@ p#core_values_star{
   position: absolute;
   top: 196px;
   right: 309px;
-  animation: star_ani 10s;
+  visibility: visible;
+  transition-property: all;
+  
+  /* animation-play-state: paused; */
+  /* animation: star_ani 10s; */
+  /* animation: star_ani2 10s; */
+  /* animation-delay: 10s;s */
   transform-origin: 50% 50%;
-  /* animation: star_ani2 10s linear infinite; */
+  animation: star_ani 10s;
   
 }
 div#coreValues_contents_slide{
@@ -101,7 +107,7 @@ div#coreValues_contents_card>span{
   left: 0px;
   z-index: 999;
   transform-style: preserve-3d;
-  transition: all 3s;
+  transition: all 2s;
   backface-visibility: hidden;
   
 }
@@ -135,9 +141,9 @@ div#coreValues_contents_card_back>span{
   position: relative;
   top: 150px;
   left: 0px;
-  z-index: 9;
+  transform-style: preserve-3d;
+  transition: all 2s;
   /* backface-visibility: hidden; */
-  transform: rotateY(180deg);
 
 }
 
@@ -154,6 +160,7 @@ div#core_values_point_wrap{
   bottom: 10px;
   overflow: hidden;
 }
+
 section#core_values_point{
   width: 200%;
   height: 100%;
@@ -163,6 +170,7 @@ section#core_values_point{
   overflow: hidden;
   animation: coreValue_text_ani 25s linear infinite;
 }
+
 p.core_values_point_text{
   width: 50%;
   height: 100%;
@@ -199,10 +207,20 @@ p.core_values_point_text{
 @keyframes star_ani{
   0%{
     left: 720px;
-    transform: rotate(360deg);
+    /* animation-play-state: paused; */
+    /* visibility: visible; */
+    /* transform: rotate(-360deg); */
   }
   100%{
     left: 1580px;
+    visibility: visible;
+    
   }
 }
+
+/* @keyframes star_ani2{
+  0%{
+    transform: rotate(0deg);
+  }
+} */
 

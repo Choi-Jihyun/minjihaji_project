@@ -1,11 +1,36 @@
 document.addEventListener("DOMContentLoaded",()=>{
-    const card = document.querySelector("#coreValues_contents_card>span, #coreValues_contents_card_back>span");
-    card.addEventListener("mouseenter", cardClick);
+    const card = document.querySelector("#coreValues_contents_card>span");
+    const card2 = document.querySelector("#coreValues_contents_card_back>span");
+    // const star = document.querySelector("#core_values_star>img");
+    card.addEventListener("mouseenter", cardHover);
+    card2.addEventListener("mouseenter", cardHover2);
 
-    function cardClick(event){
+    function cardHover(event){
     const flip = event.currentTarget;
     flip.style.transform = "rotateY(180deg)";
     }
+    
+    function cardHover2(event){
+    const flip = event.currentTarget;
+    flip.style.transform = "rotateY(-180deg)";
+    }
+
+    // core_values_star.animate({
+    //     transform: ['left: 720px', 'left: 1580px']
+    // }, {
+    //     duration: 1000,
+    //     direction: 'linear',
+    //     composite: 'add'
+    // });
+
+    // core_values_star.animate({
+    //     transform: ['rotate(0deg)', 'rotate(360deg)']
+    // }, {
+    //     duration: 5000,
+    //     iterations: Infinity,
+    //     direction: 'linear',
+    //     composite: 'add'
+    // });
 
     // const valueSection = gsap.utils.toArray("#coreValues_contents_slide");
 

@@ -124,10 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($changeTitle.children[8], { left: 1250 + 'px', duration: logoDuration, delay: 6.5 })
   }
 
-<<<<<<< HEAD
-  
-})
-=======
   //[지혜]scroll_box animation
   function activateScrollDown() {
     gsap.set($scrollBar, {display:'block', height: 0 + 'px' })
@@ -144,4 +140,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
->>>>>>> 0fce6538e304b9c6464e111c3405c4d7c5202838
