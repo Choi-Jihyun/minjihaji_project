@@ -3,7 +3,7 @@
 /* 0626 전체 크기 수정 -하정 */
 div#core_lines_wrap{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   left: 0px;
   top: 0px;
@@ -13,7 +13,7 @@ div#core_lines_wrap{
 
 section#core_lines{
   min-width: 1920px;
-  height: 100%; 
+  height: 100vh; 
   position: relative;
   left: 0;
   right: 0;
@@ -40,6 +40,9 @@ p#core{
   font: bold 150px "Sainte Colombe";
   color: #2209e3;
   text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 p#lines{
@@ -49,28 +52,40 @@ p#lines{
   right: 0px;
   bottom: 0px;
 }
-
-div#animation{
-  width: 950px;
+/* 지현 */
+div#line_animation{
+  width: 920px;
   height: 30px;
   position: absolute;
   left: 638px;
   top: 205px;
 }
-
-div#animation>svg{
+p#core_line_line{
+  width: 848px;
+  height: 1px;
   position: absolute;
-  left: 0px;
+  top: 210px;
+  left: 720px;
   top: 50%;
-  margin-top: -1px;
+  left: 0px;
 }
-
-div#animation>img{
+p#core_line_line span {
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: white;
+}
+p#core_line_star{
+  width: 30px;
+  height: 30px;
   position: absolute;
   right: 15px;
   top: 50%;
   margin-top: -15px;
 }
+
 
 div#core_line_cont{
   width: 990px;

@@ -1,14 +1,17 @@
 /* 지현 */
 div#ecofuturist_wrap {
-  min-width: 1920px;
+  /* min-width: 1920px; */
+  width: 100%;
   min-height: 350vh;
+  min-height: auto;
   /* min-height: 2970px; */
   position: relative;
   left: 0px;
   top: 0px;
 }
 div#eco_white_bg {
-  width: 100%;
+  /* width: 100%; */
+  min-width: 1920px;
   height: 250vh;
   /* min-height: 2100px; */
   position: relative;

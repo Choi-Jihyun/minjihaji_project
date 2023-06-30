@@ -14,6 +14,7 @@
   position: relative;
   top: 0px;
   left: 0px;
+  overflow: hidden;
 }
 #main{
   width: 1920px;
