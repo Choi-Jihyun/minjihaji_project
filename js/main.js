@@ -151,17 +151,19 @@ window.addEventListener('load', () => {
   //   })
   // }
   
-  // window.addEventListener('scroll', function() {
+  // window.addEventListener('mousewheel', ()=>{
   //   let mainSection = document.querySelector('#main_wrap');
   //   let coreValuesSection = document.querySelector('#core_values_wrap');
-  //   let scrollPosition = window.pageYOffset;
+  //   let scrollPosition = window.scrollY;
   //   let mainSectionHeight = mainSection.clientHeight;
   //   let triggerPositionStart = mainSectionHeight * 0.2;
   //   let triggerPositionEnd = mainSectionHeight * 0.4;
-
+  //   let isWheel = false;
   
-  //   if (window.pageYOffset >= 300 && window.pageYOffset <= 500) {
-  //     gsap.to(window, {duration: 0.8, top: 1000});
+  //   if (scrollPosition >= 300 && scrollPosition <= 500) {
+  //     gsap.to(window, {duration: 0.8, scrollTop:1000, onComplete: ()=>{
+  //       isWheel=false;
+  //     }});
   //   }
   // });
   

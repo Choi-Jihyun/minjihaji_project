@@ -32,5 +32,6 @@ window.addEventListener('load', ()=>{
       gsap.to(fixedLogo, {duration: 0.8, filter: "grayscale(100%) brightness(0)"})
       // gsap.to(fixedLogo, {attr:{src: "/minjihaji_project/images/logo.png"}})
     }
+    
   }
 })
