@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-  const coreValuesCards = document.querySelectorAll("#coreValues_contents_card > li");
+  const coreValuesCards = document.querySelectorAll("#coreValues_contents_card > span");
+  const coreValuesCardsBack = document.querySelectorAll("#coreValues_contents_card_back > span");
   const coreValuesLine = document.querySelector("#core_values_line > span");
   const coreValuesStar = document.querySelector("#core_values_star > img");
 
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   gsap.set(titleValue, {display: 'none', opacity: 0, bottom: -11})
   gsap.set(coreValuesText, {display: 'none', opacity: 0, bottom: -100})
   gsap.set(coreValuesCards, {left: 1200, display: 'none'})
+  gsap.set(coreValuesCardsBack, {left: 1200, display: 'none'})
   window.addEventListener('scroll', scrollCoreValues);
 
   function scrollCoreValues() {
@@ -35,6 +37,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 gsap.to(item, {left: 0, duration: 0.4, rotation: 10, onComplete: ()=>{
                   gsap.to(item, {left: 0, duration: 0.2, rotation: 0, onComplete: ()=>{
                     gsap.to(item, {left: 0, duration: 0.4, rotation: 10})
+                    gsap.set(coreValuesCards, {rotationY: -180, duration: 0.4});
+                  }})
+                }})
+              }})
+            }
+          for(const item of coreValuesCardsBack){
+            gsap.set(item, {display: 'block'})
+              gsap.to(item, {left: 0, duration: 2, ease: "none", onComplete: ()=>{
+                gsap.to(item, {left: 0, duration: 0.4, rotation: 10, onComplete: ()=>{
+                  gsap.to(item, {left: 0, duration: 0.2, rotation: 0, onComplete: ()=>{
+                    gsap.to(item, {left: 0, duration: 0.4, rotation: 10})
+                    gsap.set(coreValuesCardsBack, {rotationY: -180, duration: 0.4});
                   }})
                 }})
               }})
@@ -44,6 +58,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }})
     }
   }
+
+  
 })
 
 
