@@ -3,18 +3,21 @@ document.addEventListener("DOMContentLoaded",()=>{
     const card2 = document.querySelector("#coreValues_contents_card_back>span");
     // const star = document.querySelector("#core_values_star>img");
     card.addEventListener("mouseenter", cardHover);
-    card2.addEventListener("mouseenter", cardHover2);
-
+    // card2.addEventListener("mouseenter", cardHover);
+    
     function cardHover(event){
-    const flip = event.currentTarget;
-    flip.style.transform = "rotateY(180deg)";
+        const flip = event.currentTarget;
+        card2.addEventListener("mouseover", cardHover);
+
+        flip.style.transform = "rotateY(180deg)";
     }
     
     function cardHover2(event){
     const flip = event.currentTarget;
-    flip.style.transform = "rotateY(-180deg)";
+    flip.style.transform = "rotateY(180deg)";
     }
 
+    
     // core_values_star.animate({
     //     transform: ['left: 720px', 'left: 1580px']
     // }, {
