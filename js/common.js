@@ -12,7 +12,7 @@ window.addEventListener('load', ()=>{
   const subLinesPage = document.querySelector("#main_wrap");
 
   console.log(mainPage.offsetHeight);
-  
+  // 스크롤 시 로고 색상 변경 -지현
   window.addEventListener('scroll', changeLogoColor);
   
   let scrollH = window.scrollY;
@@ -42,7 +42,7 @@ window.addEventListener('load', ()=>{
 
 
 
-// 스크롤 지현
+// 스크롤 시 페이지에 붙기 -지현
   let pageHeight = [0, mainH, mainH+cvH,  mainH+cvH+eswH, mainH+cvH+eswH+eiwH, mainH+cvH+eswH+eiwH+eawH, mainH+cvH+eswH+eiwH+eawH+clH, mainH+cvH+eswH+eiwH+eawH+clH+slH]
   let pageLength = pageHeight.length;
   let currentPageNum = 0;
@@ -77,6 +77,5 @@ window.addEventListener('load', ()=>{
         isWheel = false
     }});
   }
-
 
 })
