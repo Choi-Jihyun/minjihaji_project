@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   function clickPositionBall(){
     checkPositionBall(checkMenu)
     checkPositionTitle(checkMenu)
-    scrollSlide(checkMenu)
   }
 
   function getIndex(index){
@@ -37,40 +36,36 @@ document.addEventListener('DOMContentLoaded',()=>{
   function checkPositionBall(index){
     if (selectedMenu != $positionBallLi[index]) {
       selectedMenu.classList.remove('selected')
-
+    }
       selectedMenu = $positionBallLi[index]
       $positionBallLi[index].classList.add('selected')
-    }
   }
   function checkPositionTitle(index){
     if (selectedMenuTitle != $positionBallText[index]) {
       selectedMenuTitle.classList.remove('selected')
-
+    }
       selectedMenuTitle = $positionBallText[index]
       $positionBallText[index].classList.add('selected')
-    }
   }
 
   function inactivatePositionBar(){
     selectedMenuTitle.classList.remove('selected')
   }
 
-  function scrollSlide(index){
-    gsap.to('body,html',{scrollTop:windowHeight*index})
-  }
   function scrollWindow(){
     let scrollHeight=window.pageYOffset;
-    
+
     if(scrollHeight>=windowHeight/2 && scrollHeight<windowHeight*1.5){
       checkMenu=1;
-    }else if(scrollHeight>=windowHeight*1.5 && scrollHeight<windowHeight*2.5){
+    }else if(scrollHeight>=windowHeight*1.5 && scrollHeight<windowHeight*5){
       checkMenu=2;
-    }else if(scrollHeight>=windowHeight*2.5){
+    }else if(scrollHeight>=windowHeight*5){
       checkMenu=3;
     }
     else{
       checkMenu=0;
     }
+
     checkPositionBall(checkMenu)
   }
 
