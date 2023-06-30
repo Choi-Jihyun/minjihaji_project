@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded',()=>{
+<<<<<<< Updated upstream
   const $subDetailImgLeft=document.querySelectorAll('#sub_detail_line_cont_pic_left>p>img')
   const $subDetailImgRight=document.querySelectorAll('#sub_detail_line_cont_pic_right>p>img')
+=======
+  const $subDetailImgLeft=document.querySelectorAll('#sub_detail_line_cont_pic_left>p')
+  const $subDetailImgRight=document.querySelectorAll('#sub_detail_line_cont_pic_right>p')
+>>>>>>> Stashed changes
 
   let selectedImg=null;
 
@@ -20,7 +25,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
       selectedImg=this
       gsap.to(this,{scale:(1,1.1),ease:'power1.out'})
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   }
 
   function notactivateImg(){

@@ -182,6 +182,14 @@ div#title {
       top: 0px;
       left: 0px;
     }
+    div#changeTitle_test{
+      font: bold 76px/76px 'Sainte Colombe';
+      color: white;
+      opacity: 0.5;
+      position: absolute;
+      top: 140px;
+      left: 450px;
+    }
     div#changeTitle>span {
       margin-right: 25px;
       float: left;
@@ -303,7 +311,6 @@ div#title {
       top: 400px;
       left: 0px;
       display: flex;
-      display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
@@ -326,6 +333,10 @@ div#title {
       color: #42ff00;
       transform: rotate(90deg);
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     #main_text{
       position: absolute;
       top: -30px;
@@ -359,6 +370,12 @@ div#title {
     ul#position_text>li.selected{
       display: block;
     }
+<<<<<<< Updated upstream
 
 
+=======
+    
+  div#changeTitle_test{
+>>>>>>> Stashed changes
 
+  }

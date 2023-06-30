@@ -1,7 +1,7 @@
 /* 하정 */
 /* 0627 css 합침 */
 /* 0626 전체 간격 조절 */
-div#sub_lines_wrap{
+div#sub_lines_wrap {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -11,14 +11,14 @@ div#sub_lines_wrap{
   overflow: hidden;
 }
 
-section#sub_lines{
+section#sub_lines {
   min-width: 1920px;
   height: 100%;
   margin: 0 auto;
 }
 
 /* 0626 간격 조절 */
-div#sub_lines_main_wrap{
+div#sub_lines_main_wrap {
   width: 3300px;
   height: 198px;
   position: relative;
@@ -27,54 +27,56 @@ div#sub_lines_main_wrap{
   margin-top: -99px;
   overflow: hidden;
 }
+
 /* 0626 글자 속도 조절 */
-div.marquee{
+div.marquee {
   display: block;
   width: 200%;
   height: 100%;
   position: absolute;
   left: 0px;
-  top: 50%; 
+  top: 50%;
   margin-top: -94px;
   overflow: hidden;
   animation: sub_line 25s linear infinite;
 }
 
-div.marquee>span{
+div.marquee>span {
   float: left;
   width: 50%;
-  font: bold 150px "Sainte Colombe";  
+  font: bold 150px "Sainte Colombe";
 }
 
 /* 0626글자 간격 조절함 */
-div.marquee>span>a{
+div.marquee>span>a {
   margin-right: 125px;
 }
 
 /* 0627 호버하면 무한루프 정지하게 수정 -하정 */
-div.marquee:hover{
+div.marquee:hover {
   animation-play-state: paused;
   cursor: pointer;
 }
 
 /* 0627 임시로 색상 지정해서 호버하면 글자색 바뀌게 수정 -하정 */
-div.marquee>span>a:hover{
+div.marquee>span>a:hover {
   color: #2209e3;
 }
 
 
 
-@keyframes sub_line{
-  0%{
-      left: 0%;
+@keyframes sub_line {
+  0% {
+    left: 0%;
   }
-  100%{
-      left: -100%;
+
+  100% {
+    left: -100%;
   }
 }
 
 /* 하정 */
-div#sub_detail_line_wrap{
+div#sub_detail_line_wrap {
   min-width: 1920px;
   height: 100vh;
   position: relative;
@@ -82,7 +84,7 @@ div#sub_detail_line_wrap{
   top: 0px;
 }
 
-div#sub_detail_line_cont_text{
+div#sub_detail_line_cont_text {
   width: 450px;
   height: 200px;
   position: absolute;
@@ -90,15 +92,19 @@ div#sub_detail_line_cont_text{
   top: 393px;
 }
 
-div#sub_detail_line_cont_text>p#title{
+div#sub_detail_line_cont_text>p#title {
   font: bold 80px "Sainte Colombe";
 }
 
-div#sub_detail_line_cont_text>p#contents{
+div#sub_detail_line_cont_text>p#contents {
   font: bold 24px "Sainte Colombe";
 }
 
+<<<<<<< Updated upstream
 section#sub_detail_line_cont_pic_left{
+=======
+section#sub_detail_line_cont_pic_left {
+>>>>>>> Stashed changes
   width: 400px;
   height: 100%;
   position: absolute;
@@ -110,6 +116,10 @@ section#sub_detail_line_cont_pic_left{
   align-items: flex-start;
   animation: subline_img_left 20s linear infinite;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 section#sub_detail_line_cont_pic_left>p {
   width: 400px;
   height: 500px;
@@ -123,6 +133,7 @@ section#sub_detail_line_cont_pic_left>p>img {
   border-radius: 10px;
   object-fit: cover;
 }
+<<<<<<< Updated upstream
 @keyframes subline_img_left{
   0%{
     top:0%
@@ -136,6 +147,24 @@ section#sub_detail_line_cont_pic_left:hover{
 }
 
 section#sub_detail_line_cont_pic_right{
+=======
+
+@keyframes subline_img_left {
+  0% {
+    top: 0%
+  }
+
+  100% {
+    top: -100%
+  }
+}
+
+section#sub_detail_line_cont_pic_left:hover {
+  animation-play-state: paused;
+}
+
+section#sub_detail_line_cont_pic_right {
+>>>>>>> Stashed changes
   width: 400px;
   height: 100%;
   position: absolute;
@@ -147,6 +176,10 @@ section#sub_detail_line_cont_pic_right{
   align-items: flex-start;
   animation: subline_img_right 20s linear infinite;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 section#sub_detail_line_cont_pic_right>p {
   width: 400px;
   height: 500px;
@@ -160,6 +193,7 @@ section#sub_detail_line_cont_pic_right>p>img {
   border-radius: 10px;
   object-fit: cover;
 }
+<<<<<<< Updated upstream
 @keyframes subline_img_right{
   0%{
     top: -100%;
@@ -172,8 +206,55 @@ section#sub_detail_line_cont_pic_right>p>img {
 section#sub_detail_line_cont_pic_right:hover{
   animation-play-state: paused;
 }
+=======
 
-button#prev_btn{
+
+@keyframes subline_img_right {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+section#sub_detail_line_cont_pic_right:hover {
+  animation-play-state: paused;
+}
+
+/* div#sub_detail_line_cont_pic>img:nth-child(1){
+  position: absolute;
+  left: 0px;
+  top: -340px;
+}
+
+div#sub_detail_line_cont_pic>img:nth-child(2){ 
+  position: absolute;   
+  left: 0px;
+  top: 204px;
+}
+
+div#sub_detail_line_cont_pic>img:nth-child(3){ 
+  position: absolute;   
+  left: 0px;
+  top: 748px;
+}
+
+div#sub_detail_line_cont_pic>img:nth-child(4){ 
+  position: absolute;   
+  right: 0px;
+  top: 10px;
+}
+
+div#sub_detail_line_cont_pic>img:nth-child(5){ 
+  position: absolute;   
+  right: 0px;
+  top: 554px;
+} */
+>>>>>>> Stashed changes
+
+button#prev_btn {
   background: none;
   border: none;
   position: absolute;
@@ -189,5 +270,3 @@ button#prev_btn{
 button#prev_btn:hover {
   filter: none;
 }
-
-

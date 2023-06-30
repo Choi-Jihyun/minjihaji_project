@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       gsap.to('body,html',{scrollTop:windowHeight*5.4})
     }
   }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   function scrollWindow(){
     let scrollHeight=window.pageYOffset;
 
