@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   function clickPositionBall(){
     checkPositionBall(checkMenu)
     checkPositionTitle(checkMenu)
+    scrollSlide(checkMenu)
   }
 
   function getIndex(index){
@@ -50,6 +51,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   function inactivatePositionBar(){
     selectedMenuTitle.classList.remove('selected')
+  }
+
+  function scrollSlide(index){
+    if(index!=3){
+      gsap.to('body,html',{scrollTop:windowHeight*index})
+    }else{
+      gsap.to('body,html',{scrollTop:windowHeight*5.4})
+    }
   }
 
   function scrollWindow(){
