@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
-  const $subDetailImgLeft=document.querySelectorAll('#sub_detail_line_cont_pic_left>img')
-  const $subDetailImgRight=document.querySelectorAll('#sub_detail_line_cont_pic_right>img')
+  const $subDetailImgLeft=document.querySelectorAll('#sub_detail_line_cont_pic_left>p>img')
+  const $subDetailImgRight=document.querySelectorAll('#sub_detail_line_cont_pic_right>p>img')
 
   let selectedImg=null;
 
