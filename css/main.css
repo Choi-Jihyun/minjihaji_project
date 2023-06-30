@@ -6,6 +6,8 @@
 }
 #main_wrap{
   width: 100%;
+  /* 지현: 반응형 작업 */
+  height: 100vh;
   height: 970px;
   background-size: cover;
   background-color: #2209e3;
@@ -15,6 +17,7 @@
 }
 #main{
   width: 1920px;
+  /* 지현: 반응형 작업 */
   height: 100%;
   margin: 0px auto;
   position: relative;
@@ -176,6 +179,7 @@ div#title {
 
     div#changeTitle {
       font: bold 76px/76px 'Sainte Colombe';
+      font: bold 76px/76px 'Sainte Colombe';
       color: white;
       display: none;
       position: absolute;
@@ -262,21 +266,23 @@ div#title {
       left: 50%;
       margin-left: -61.5px;
     }
-    p#scroll_text{
+    #scroll_box>p{
       width: 123px;
       height: 25px;
-      font: bold 20px/25px 'Sainte Colombe' ;
+      font: bold 20px/25px 'Sainte Colombe';
       color: white;
       position: absolute;
       bottom: 0px;
       text-align: center;
+      opacity: 0;
     }
-    p#scroll_bar{
+    #scroll_box .scroll_bar {
       width: 1px;
-      height: 60px;
+      /* height: 70px; */
+      height: 0px;
       background-color: white;
       position: absolute;
-      top: 0px;
+      top: -50px;
       left: 50%;
     }
 

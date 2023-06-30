@@ -19,8 +19,9 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js'></script>
   <script src="/minjihaji_project/js/main.js"></script>
-  <!-- 지현 추가 -->
+  <script src="/minjihaji_project/js/core_values.js"></script>
   <script src="/minjihaji_project/js/ecofuturist.js"></script> 
+  <script src="/minjihaji_project/js/common.js"></script> 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/CustomEase.min.js' integrity='sha512-iLvVX+hVp6SsJQ+q7QR9F6SJH9fQ/tNn4H8MbiufALZtSGpxtTGMSjHbYSVVa7KxaYFe4yEjv4PUx7YPP9SpKA==' crossorigin='anonymous'></script>
 </head>
 <body>
@@ -28,10 +29,12 @@
     <!-- 지현 헤더 추가 -->
     <header>
       <div id="header_bar"></div>
-      <div id="logo">
-        <img src="/minjihaji_project/images/logo.png" alt="마린세르 로고">
-        <h1 id="logo_title">marine serre</h1>
-      </div>
+      <a href="#main">
+        <div id="logo">
+          <img src="/minjihaji_project/images/logo_green.png" alt="마린세르 로고">
+          <h1 id="logo_title">marine serre</h1>
+        </div>
+      </a>
     </header>
     <h2 class="hidden">introduce</h2>
     <!-- 메인 -->
@@ -67,8 +70,8 @@
         </div>
 
         <div id="scroll_box">
-          <p id="scroll_bar"></p>
-          <p id="scroll_text">Scroll Down</p>
+          <span class="scroll_bar"></span>
+          <p class="scroll_down_text">Scroll Down</p>
         </div>
 
         <div id="position_bar"><!--[지혜수정_0627] position_bar 태그 다지우고 이걸로 바꿔주세요-->
@@ -92,7 +95,7 @@
 
     <!-- 코어밸류 지혜-->
     <div id="core_values_wrap">
-      <section id="core_values"><!--코어벨류메뉴렙 & 코어벨류 제거함-->
+      <section id="core_values">
         <h3 class="hidden">core values</h3>
         <div id="core_values_title">
           <p id="title_core">Core</p>
@@ -102,8 +105,18 @@
             Marines Serre is:
           </p>
         </div>
+<<<<<<< HEAD
         <p id=core_values_line></p>
         <p id="core_values_star"><img src="/minjihaji_project/images/core_values_star.png"></p><!--별이미지 추가함-->
+=======
+        <p id="core_values_line">
+          <span></span>
+          <!-- <img src="/minjihaji_project/images/core_values_line.svg"> -->
+        </p>
+        <p id="core_values_star">
+          <img src="/minjihaji_project/images/core_values_star.png">
+        </p><!--별이미지 추가함-->
+>>>>>>> jihyun
 
         <div id="core_values_point_wrap">
           <section id="core_values_point">
@@ -156,11 +169,11 @@
                   <span class="float_text text_r1">trasformative</span>
                   <span class="float_text text_i">resilient</span>
                   <span class="float_text text_n">circularity</span>
-                  <span class="float_text text_e1">feminist</span>
+                  <span class="float_text text_e1">crafted</span>
                   <span class="float_text text_s">realist</span>
                   <span class="float_text text_e2" style="width:150px">body consious</span>
                   <span class="float_text text_r2">protective</span>
-                  <span class="float_text text_r3">crafted</span>
+                  <span class="float_text text_r3">feminist</span>
                   <span class="float_text text_e3">autonomous</span>
                 </p>
               </div>
@@ -263,8 +276,8 @@
       <section id="sub_lines">
         <h3 class="hidden">sub lines</h3>
         <div id="sub_lines_main_wrap">
-          <div class="marquee">
-            <span>
+          <div class="sub_line_marquee">
+            <!-- <span>
               <a href="/minjihaji_project/sub_broderline.html">Broderline</a>
               <a href="/minjihaji_project/sub_whiteline.html">Whiteline</a>
               <a href="/minjihaji_project/sub_goldline.html">Goldline</a>
@@ -274,12 +287,25 @@
               <a href="/minjihaji_project/sub_broderline.html">Broderline</a>
               <a href="/minjihaji_project/sub_whiteline.html">Whiteline</a>
               <a href="/minjihaji_project/sub_goldline.html">Goldline</a>
-              <a href="/minjihaji_project/sub_redline.html">Redline</a>
-            </span>
+              <a href="/minjihaj _project/sub_redline.html">Redline</a>
+            </span> -->
+            <!-- 지현 -->
+            <ul class="sub_line_lists">
+              <li><a href="/minjihaji_project/sub_broderline.html">Broderline</a></li>
+              <li><a href="/minjihaji_project/sub_whiteline.html">Whiteline</a></li>
+              <li><a href="/minjihaji_project/sub_goldline.html">Goldline</a></li>
+              <li><a href="/minjihaji_project/sub_redline.html">Redline</a></li>
+            </ul>
+
+            <ul class="sub_line_lists">
+              <li><a href="/minjihaji_project/sub_broderline.html">Broderline</a></li>
+              <li><a href="/minjihaji_project/sub_whiteline.html">Whiteline</a></li>
+              <li><a href="/minjihaji_project/sub_goldline.html">Goldline</a></li>
+              <li><a href="/minjihaji_project/sub_redline.html">Redline</a></li>
+            </ul>
+
           </div>
         </div>
-
-
 
   </section>
 

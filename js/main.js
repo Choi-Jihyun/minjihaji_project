@@ -1,31 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+
+window.addEventListener('load', () => {
+  // 지현
   const svgPath = document.querySelector("#logo_svg_wrap > svg > path");
-  const svgLogo = document.querySelector('.svg_logo')
-//[0629_2]필요없는 변수 수정
+
+  //[지혜수정_0627]
   const $mainTitle = document.querySelector('#title')
   const $changeTitle = document.querySelector('#changeTitle')
-
-  const $scrollBar = document.querySelector('#scroll_bar')
-  const $scrollText = document.querySelector('#scroll_text')
-
+  const scrollDownText = document.querySelector("#scroll_box > p");
+  const scrollBar = document.querySelector(".scroll_bar");
+  const mainPage = document.querySelector("#main");
   let logoDuration = 1;
 
-  gsap.set(svgLogo,{display:'none'})
-  gsap.set($scrollBar,{display:'none'})
-  gsap.set($scrollText,{display:'none'})
+  activateTitle();
 
-  activateTitle()
-  setTimeout(logoactivate, 7000)
-  setTimeout(activateScrollDown, 8000)
+  // gsap.set(svgPath, {display: 'block'})
+  // svgPath.classList.add('animation')
+  // setInterval(scrollDownAni, 1600);
+  // gsap.to(scrollBar, {height: 70, delay: 1.5})
+  // gsap.to(scrollDownText, {opacity: 1, delay: 2.7})  // delay: 2.2
 
-  function logoactivate() {
-    gsap.set(svgLogo,{display:'block'})
-    svgPath.classList.add('animation')
+  // 지현
+  // 애니메이션 끝나면 작동하도록 함
+  gsap.set(scrollDownText, {opacity: 0})
+  function scrollDownAni() {
+    // 4,5
+    gsap.to(scrollDownText, {bottom: -10, duration: 0.2, onComplete: ()=>{
+      gsap.to(scrollDownText, {bottom: 0, duration: 0.3, onComplete: ()=>{
+        gsap.to(scrollDownText, {bottom: -10, duration: 0.2,onComplete: ()=>{
+          gsap.to(scrollDownText, {bottom: 0, duration: 0.3, })
+        }})
+      }})
+    }})
   }
 
-  function activateTitle() {//0167
+  function activateTitle() {
 
     gsap.set($changeTitle, { display: 'block', top: 60 + 'px', left: -90 + 'px' })
+    gsap.set(svgPath, {display: 'none'})
     gsap.to($changeTitle.children[10], { left: 1509.88 + 'px', ease: 'power1.out', duration: logoDuration, delay: 0.2 })
 
     gsap.to($mainTitle.children[11], { top: 76 + 'px', duration: logoDuration, delay: 1 })
@@ -70,8 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($mainTitle.children[7], { left: 1500 + 'px', duration: logoDuration, delay: 4 })
     gsap.to($mainTitle.children[7], { left: 1800 + 'px', duration: logoDuration, delay: 4.5 })
     gsap.to($mainTitle.children[7], { left: 2000 + 'px', duration: logoDuration, delay: 5 })
-    // gsap.to($mainTitle.children[7], { left: 900 + 'px', duration: logoDuration, delay: 5.5 })
-    // gsap.to($mainTitle.children[7], { left: 2000 + 'px', duration: logoDuration, delay: 5.8 })
 
     gsap.to($mainTitle.children[8], { top: -76 + 'px', duration: logoDuration, delay: 2.2 })
     gsap.to($mainTitle.children[8], { left: 893.26 + 'px', duration: logoDuration, delay: 2.5 })
@@ -121,22 +131,44 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to($changeTitle.children[8], { left: 917 + 'px', duration: logoDuration, delay: 5 })
     gsap.to($changeTitle.children[8], { left: 1344.64 + 'px', duration: logoDuration, delay: 5.5 })
     gsap.to($changeTitle.children[8], { top: 75 + 'px', duration: logoDuration, delay: 6 })
-    gsap.to($changeTitle.children[8], { left: 1250 + 'px', duration: logoDuration, delay: 6.5 })
+    gsap.to($changeTitle.children[8], { left: 1250+ 'px', duration: logoDuration, delay: 6.5, onComplete: ()=>{
+      gsap.set(svgPath, {display: 'block'})
+      svgPath.classList.add('animation')
+      setInterval(scrollDownAni, 1600);
+      gsap.to(scrollBar, {height: 70, delay: 1.5})
+      gsap.to(scrollDownText, {opacity: 1, delay: 2.7})
+    }})
   }
 
-  //[지혜]scroll_box animation
-  function activateScrollDown() {
-    gsap.set($scrollBar, {display:'block', height: 0 + 'px' })
-    gsap.to($scrollBar, {
-      height: 60 + 'px', ease: 'power.out1', duration: 1, onConplete: () => {
-        gsap.set($scrollBar, { height: 60 + 'px' })
-      }
-    })
-    setInterval(scrollTextAni, 2000)
-  }
-  function scrollTextAni() {
-    gsap.set($scrollText, { display:'block',bottom: 20 + 'px' })
-    gsap.to($scrollText, { duration: 1, bottom: 0 + 'px', ease: 'bounce' })
-  }
+  // function scrollDownAuto() {
+  //   gsap.to(mainPage, {
+  //     scrollTrigger: {
+  //       trigger: mainPage,
+  //       markers: true,
+  //       start: "top 80%",
+  //       bottom: "bottom 100%"
+  //     }
+  //   })
+  // }
+  
+  // window.addEventListener('mousewheel', ()=>{
+  //   let mainSection = document.querySelector('#main_wrap');
+  //   let coreValuesSection = document.querySelector('#core_values_wrap');
+  //   let scrollPosition = window.scrollY;
+  //   let mainSectionHeight = mainSection.clientHeight;
+  //   let triggerPositionStart = mainSectionHeight * 0.2;
+  //   let triggerPositionEnd = mainSectionHeight * 0.4;
+  //   let isWheel = false;
+  
+  //   if (scrollPosition >= 300 && scrollPosition <= 500) {
+  //     gsap.to(window, {duration: 0.8, scrollTop:1000, onComplete: ()=>{
+  //       isWheel=false;
+  //     }});
+  //   }
+  // });
+  
+  
+
+  
 })
 

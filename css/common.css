@@ -25,13 +25,13 @@ ul,li{
   list-style:none;
 }
 
-body{
+/* body{
   -ms-overflow-style: none;  
 }        
 
 body::-webkit-scrollbar {  
   display: none; 
-}
+} */
 
 /* 지현 */
 div#header_bar {
@@ -69,6 +69,7 @@ h1#logo_title {
   text-transform: uppercase;
   font: bold 16px/28px "sainte colombe";
   letter-spacing: 6px;
-  color: black;
+  color: #42ff00;
+  transition: color 0.4s ease-out;
 }
 

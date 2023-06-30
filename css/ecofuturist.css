@@ -39,7 +39,7 @@ div#ecofuturist_text_svg {
   height: 160px;
   margin: 0 auto;
 
-  background-image: url('/minjihaji_project/images/ecofuturist_thumbnail.jpg');
+  background-image: url('/minjihaji_project/images/ecofuturist_thumbnail.png');
   mask-image: url('/minjihaji_project/images/ecofuturist.svg');
   mask-repeat: no-repeat;
   mask-position: 0px 0px; 
