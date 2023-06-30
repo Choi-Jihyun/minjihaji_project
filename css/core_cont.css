@@ -56,6 +56,7 @@ p#core_cont_num{
   z-index: 999;
 }
 
+
 /* 0626 하정 이미지 비율과 크기, 위치 수정 */
 li#core_cont>img{
   width: 450px;
@@ -74,6 +75,7 @@ div#cont_text{
   top: 300px;
   /* background: palegoldenrod; */
 }
+
 
 /* 글자 간격 margin 줌 */
 div#cont_text>p#title{
@@ -105,7 +107,7 @@ div#core_ani>img{
   top: 185px;
 }
 
-section#core_contents>a>img{
+section#core_contents>img{
   width: 18px;
   height: 18px;
   position: absolute;
