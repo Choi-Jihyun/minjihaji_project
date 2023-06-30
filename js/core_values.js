@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const $coreValuesContentSlide=document.querySelector('#coreValues_contents_slide')
   const $coreValuesContentsCard=document.querySelectorAll('#coreValues_contents_card>li>a')
 
-  let scrollposition=window.pageXOffset
+  let scrollposition=window.pageYOffset
 
   gsap.set($coreValuesTitle,{height:-1000 >='px',opacity:0})
   if(scrollposition>=100+'vh'){

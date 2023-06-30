@@ -333,10 +333,6 @@ div#title {
       color: #42ff00;
       transform: rotate(90deg);
     }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     #main_text{
       position: absolute;
       top: -30px;
@@ -370,12 +366,7 @@ div#title {
     ul#position_text>li.selected{
       display: block;
     }
-<<<<<<< Updated upstream
-
-
-=======
     
   div#changeTitle_test{
->>>>>>> Stashed changes
 
   }
