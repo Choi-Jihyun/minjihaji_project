@@ -26,5 +26,11 @@ document.addEventListener('DOMContentLoaded',()=>{
     gsap.to(this,{scale:(1),ease:'power1.out'})
   }
 
+  const backButton = document.querySelector(".prev_btn");
+
+  backButton.addEventListener('click', back)
+  function back() {
+    history.back(); 
+  }
 
 })

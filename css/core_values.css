@@ -51,12 +51,21 @@ p#core_values_text{
   left: 0px;
 }
 p#core_values_line{
-  width: 860px;
+  width: 848px;
   height: 1px;
   position: absolute;
-  top: 200px;
+  top: 210px;
   left: 720px;
 }
+p#core_values_line span {
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: black;
+}
+
 p#core_values_star{
   width: 30px;
   height: 30px;
@@ -64,6 +73,13 @@ p#core_values_star{
   top: 196px;
   right: 309px;
 }
+
+/* 지현 */
+#core_values_star > img {
+  width: 100%;
+  height: 100%;
+}
+
 div#coreValues_contents_slide{
   width: 500%;
   height: 100%;
@@ -81,7 +97,7 @@ ul#coreValues_contents_card{
   justify-content: space-around;
   align-content: center;
 }
-ul#coreValues_contents_card>li{
+ul#coreValues_contents_card > li{
   width: 410px;
   height: 618px; 
   margin:0px auto; 
@@ -91,9 +107,10 @@ ul#coreValues_contents_card>li{
   position: relative;
   top: 150px;
   left: 0px;
+  transform: translate(350, 30)
 }
 
-ul#coreValues_contents_card>li img{
+ul#coreValues_contents_card > li img{
   width: 100%;
 }
 /*poin_text 무한루트 코드*/

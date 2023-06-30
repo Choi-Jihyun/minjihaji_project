@@ -26,11 +26,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   }
 
-
-
-  
-  
-
   gsap.set(waveWrap, {display: "none"})
 
   gsap.to(brick, {
@@ -44,13 +39,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     },
     onComplete: ()=>{
       gsap.to(holeBack, {display: 'none', duration: 0.1, onComplete: ()=> { 
-        // 추가
         gsap.to(brick, {opacity: 0, duration: 0.1, onComplete: ()=>{
           gsap.to(holeFront, {display: 'none'})
         }})
       }}) 
       gsap.to(waveWrap, {display: "block", bottom: 46+'vh', duration: 0.7})
-      
     }
   })
 
@@ -67,7 +60,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       gsap.to(logoGlobe, {display: 'none', duration: 0.2})
     }
   })
-
 
   let rotationGlobe = 100;
   let speedGlobe = 20;
@@ -103,17 +95,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   })
 
-  // logoSpinWrap
-  let rotation = 100;
-  let speed = 20;
-
-  setInterval(smallLogoAnimate, 100); // 10밀리 초마다 animate 함수 실행
-
-  function smallLogoAnimate() {
-    rotation += speed;
-    logoSpinWrap.style.transform = `rotateY(${rotation}deg)`;
-  }
+  // 지현 -> 스크롤하면 로고 돌아가는 거
+  // window.addEventListener('scroll', scrollLogoAnimate);
+  // function scrollLogoAnimate() {
+  //   let scrollHeight = window.scrollY + window.innerHeight;
+  //   gsap.to(logoGlobeSpin, {transform: `rotateY(${scrollHeight*2}deg)`})
+  // }
+  
 
 
 
 })
+
+
+// 하이

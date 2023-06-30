@@ -18,18 +18,68 @@ section#sub_lines {
 }
 
 /* 0626 간격 조절 */
-div#sub_lines_main_wrap {
-  width: 3300px;
+div#sub_lines_main_wrap{
+  /* width: 3300px; */
+  width: 100%;
   height: 198px;
   position: relative;
   left: 0px;
   top: 50%;
   margin-top: -99px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* background: red; */
 }
 
-/* 0626 글자 속도 조절 */
-div.marquee {
+
+/* 지현 새로운 마크업 */
+div.sub_line_marquee {
+  width: 7000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+ul.sub_line_lists {
+  width: 3500px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  /* background: blue;
+  white-space: nowrap;
+  overflow: hidden; */
+  animation: sub_line_ani 14s linear infinite;
+}
+@keyframes sub_line_ani{
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+div.sub_line_marquee:hover .sub_line_lists{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+ul.sub_line_lists a {
+  font: bold 150px "Sainte Colombe"; 
+  color: black; 
+  transition: color 0.1s ease-out;
+}
+ul.sub_line_lists > li:hover a{
+  color: #2209e3;
+}
+
+
+/* 
+
+하정 이전 마크업
+div.marquee{
   display: block;
   width: 200%;
   height: 100%;
@@ -47,33 +97,31 @@ div.marquee>span {
   font: bold 150px "Sainte Colombe";
 }
 
-/* 0626글자 간격 조절함 */
-div.marquee>span>a {
+div.marquee>span>a{
   margin-right: 125px;
 }
 
-/* 0627 호버하면 무한루프 정지하게 수정 -하정 */
-div.marquee:hover {
+div.marquee:hover{
   animation-play-state: paused;
   cursor: pointer;
 }
 
-/* 0627 임시로 색상 지정해서 호버하면 글자색 바뀌게 수정 -하정 */
-div.marquee>span>a:hover {
+div.marquee>span>a:hover{
   color: #2209e3;
 }
 
 
-
-@keyframes sub_line {
-  0% {
-    left: 0%;
+@keyframes sub_line{
+  0%{
+      left: 0%;
   }
 
   100% {
     left: -100%;
   }
-}
+} */
+
+
 
 /* 하정 */
 div#sub_detail_line_wrap {
@@ -82,6 +130,7 @@ div#sub_detail_line_wrap {
   position: relative;
   left: 0px;
   top: 0px;
+  overflow: hidden;
 }
 
 div#sub_detail_line_cont_text {
@@ -151,6 +200,7 @@ section#sub_detail_line_cont_pic_right {
   justify-content: space-between;
   align-items: flex-start;
   animation: subline_img_right 20s linear infinite;
+  
 }
 section#sub_detail_line_cont_pic_right>p {
   width: 400px;
@@ -211,7 +261,7 @@ div#sub_detail_line_cont_pic>img:nth-child(5){
   top: 554px;
 } */
 
-button#prev_btn {
+button.prev_btn{
   background: none;
   border: none;
   position: absolute;
@@ -224,6 +274,6 @@ button#prev_btn {
 }
 
 /* 지현 추가 */
-button#prev_btn:hover {
+button.prev_btn:hover {
   filter: none;
 }
