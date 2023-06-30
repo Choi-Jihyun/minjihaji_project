@@ -18,10 +18,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       gsap.to(selectedImg,{scale:(1)})
     }
 
-    if(selectedImg !=this){
       selectedImg=this
       gsap.to(this,{scale:(1,1.1),ease:'power1.out'})
-    }
 
   }
 
