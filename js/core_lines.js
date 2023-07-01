@@ -13,8 +13,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   function scrollCoreValues() {
     let scrollHeight = window.scrollY;
-    
-    if(scrollHeight > window.innerHeight){
+    let mainH = mainPage.clientHeight;
+    let cvH = coreValuesPage.clientHeight;
+    let efH = ecofuturistPage.clientHeight;
+    let eswH = ecofuturistSvgWrap.clientHeight;
+    if(scrollHeight > mainH+cvH+efH){
       gsap.set(titleCore2, {display: 'block'})
       gsap.to(titleCore2, {top: 0, opacity:1, duration: 1, ease: "power1.out", onComplete:()=>{
         gsap.to(coreLinesLine, {width: 848, duration: 1, onComplete: ()=>{

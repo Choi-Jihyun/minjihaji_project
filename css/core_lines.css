@@ -20,7 +20,7 @@ section#core_lines{
 }
 div#core_line_inner {
   min-width: 1920px;
-  height: 90vh;
+  height: 100vh;
   position: absolute;
   left: 50%;
   margin-left: -960px;

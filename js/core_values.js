@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   function scrollCoreValues() {
     let scrollHeight = window.scrollY;
-
     
-    if(scrollHeight > window.innerHeight){
+    if(scrollHeight > window.innerHeight-10){
       gsap.set(titleCore, {display: 'block'})
       gsap.to(titleCore, {top: 0, opacity:1, duration: 1, ease: "power1.out"})
       gsap.set(titleValue, {display: 'block'})
