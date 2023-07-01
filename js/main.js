@@ -14,21 +14,15 @@ window.addEventListener('load', () => {
 
   activateTitle();
 
-  // gsap.set(svgPath, {display: 'block'})
-  // svgPath.classList.add('animation')
-  // setInterval(scrollDownAni, 1600);
-  // gsap.to(scrollBar, {height: 70, delay: 1.5})
-  // gsap.to(scrollDownText, {opacity: 1, delay: 2.7})  // delay: 2.2
-
   // 지현
   // 애니메이션 끝나면 작동하도록 함
   gsap.set(scrollDownText, {opacity: 0})
   function scrollDownAni() {
     // 4,5
-    gsap.to(scrollDownText, {bottom: -10, duration: 0.2, onComplete: ()=>{
-      gsap.to(scrollDownText, {bottom: 0, duration: 0.3, onComplete: ()=>{
-        gsap.to(scrollDownText, {bottom: -10, duration: 0.2,onComplete: ()=>{
-          gsap.to(scrollDownText, {bottom: 0, duration: 0.3, })
+    gsap.to(scrollDownText, {top: 50, duration: 0.3, delay: 1, onComplete: ()=>{
+      gsap.to(scrollDownText, {top: 40, duration: 0.4, onComplete: ()=>{
+        gsap.to(scrollDownText, {top: 50, duration: 0.3,onComplete: ()=>{
+          gsap.to(scrollDownText, {top: 40, duration: 0.4})
         }})
       }})
     }})
@@ -134,41 +128,11 @@ window.addEventListener('load', () => {
     gsap.to($changeTitle.children[8], { left: 1280+ 'px', duration: logoDuration, delay: 6.5, onComplete: ()=>{
       gsap.set(svgPath, {display: 'block'})
       svgPath.classList.add('animation')
-      setInterval(scrollDownAni, 1600);
       gsap.to(scrollBar, {height: 70, delay: 1.5})
-      gsap.to(scrollDownText, {opacity: 1, delay: 2.7})
+      gsap.to(scrollDownText, {opacity: 1, delay: 2.4})
+      setInterval(scrollDownAni, 2600);
     }})
   }
-
-  // function scrollDownAuto() {
-  //   gsap.to(mainPage, {
-  //     scrollTrigger: {
-  //       trigger: mainPage,
-  //       markers: true,
-  //       start: "top 80%",
-  //       bottom: "bottom 100%"
-  //     }
-  //   })
-  // }
-  
-  // window.addEventListener('mousewheel', ()=>{
-  //   let mainSection = document.querySelector('#main_wrap');
-  //   let coreValuesSection = document.querySelector('#core_values_wrap');
-  //   let scrollPosition = window.scrollY;
-  //   let mainSectionHeight = mainSection.clientHeight;
-  //   let triggerPositionStart = mainSectionHeight * 0.2;
-  //   let triggerPositionEnd = mainSectionHeight * 0.4;
-  //   let isWheel = false;
-  
-  //   if (scrollPosition >= 300 && scrollPosition <= 500) {
-  //     gsap.to(window, {duration: 0.8, scrollTop:1000, onComplete: ()=>{
-  //       isWheel=false;
-  //     }});
-  //   }
-  // });
-  
-  
-
   
 })
 
