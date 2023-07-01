@@ -110,11 +110,13 @@ window.addEventListener('load', ()=>{
 
     if((scrollH < mainH - 40) || ( scrollH > mainH + cvH + eiwH + 500 && scrollH < mainH + cvH + efH + clH - 20)) {
       logoTitle.style.color = "#42ff00"
-      gsap.to(fixedLogo, {duration: 0.4, filter: "none"})
+      fixedLogo.style.filter = "none"
+      // gsap.to(fixedLogo, {duration: 0.4, filter: "none"})
       // gsap.to(fixedLogo, {attr:{src: "/minjihaji_project/images/logo_green.png"}})
     } else {
       logoTitle.style.color = "black"
-      gsap.to(fixedLogo, {duration: 0.8, filter: "grayscale(100%) brightness(0)"})
+      fixedLogo.style.filter = "grayscale(100%) brightness(0)"
+      // gsap.to(fixedLogo, {duration: 0.8, filter: "grayscale(100%) brightness(0)"})
       // gsap.to(fixedLogo, {attr:{src: "/minjihaji_project/images/logo.png"}})
     }
     

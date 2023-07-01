@@ -18,11 +18,10 @@ window.addEventListener('load', () => {
   // 애니메이션 끝나면 작동하도록 함
   gsap.set(scrollDownText, {opacity: 0})
   function scrollDownAni() {
-    // 4,5
-    gsap.to(scrollDownText, {top: 50, duration: 0.3, delay: 1, onComplete: ()=>{
-      gsap.to(scrollDownText, {top: 40, duration: 0.4, onComplete: ()=>{
-        gsap.to(scrollDownText, {top: 50, duration: 0.3,onComplete: ()=>{
-          gsap.to(scrollDownText, {top: 40, duration: 0.4})
+    gsap.to(scrollDownText, {top: 50, duration: 0.2, delay: 1, onComplete: ()=>{
+      gsap.to(scrollDownText, {top: 40, duration: 0.3, onComplete: ()=>{
+        gsap.to(scrollDownText, {top: 50, duration: 0.2,onComplete: ()=>{
+          gsap.to(scrollDownText, {top: 40, duration: 0.3})
         }})
       }})
     }})

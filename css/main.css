@@ -60,6 +60,7 @@ div#logo_svg_wrap {
   /* stroke-dashoffset: 720; */
   stroke: #42ff00;
   stroke-width: 1px;
+  display:none;
 }
 
 .svg_logo.animation {

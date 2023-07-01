@@ -18,20 +18,20 @@ a{
 }
 
 body,html{
-  height:100%; 
+  width: 100%;
 }
 
 ul,li{
   list-style:none;
 }
 
-/* body{
+body{
   -ms-overflow-style: none;  
 }        
 
 body::-webkit-scrollbar {  
   display: none; 
-} */
+}
 
 /* 지현 */
 div#header_bar {
@@ -61,6 +61,7 @@ div#logo {
 div#logo img {
   width: 25px;
   height: 25px;
+  transition: all 0.4s ease-out;
 }
 
 h1#logo_title {
