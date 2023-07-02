@@ -10,7 +10,7 @@ div#core_values_wrap{
 }
 section#core_values{
   min-width: 1920px;
-  height: 100%;
+  height: 120%;
   margin: 0px auto;
   position: relative;
   top: 0px;
@@ -21,7 +21,7 @@ div#core_values_title{
   width: 496px;
   height: 292px;
   position: absolute;
-  top: 143px;
+  top: 250px;
   left: 166px;
 }
 p#title_core{
@@ -39,7 +39,7 @@ p#title_values{
   height: 100px;
   font: bold 80px/100px 'Sainte Colombe';
   position: absolute;
-  bottom: 89px;
+  bottom: 0px;
   right: 0px;
 }
 p#core_values_text{
@@ -54,7 +54,7 @@ p#core_values_line{
   width: 848px;
   height: 1px;
   position: absolute;
-  top: 210px;
+  top:265px;
   left: 720px;
 }
 p#core_values_line span {
@@ -70,7 +70,7 @@ p#core_values_star{
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 196px;
+  top: 250px;
   right: 309px;
 }
 
@@ -81,84 +81,96 @@ p#core_values_star{
 }
 
 div#coreValues_contents_slide{
-  width: 500%;
+  width: 100%;
   height: 100%;
   margin:0px auto; 
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-}
-div#coreValues_contents_card{
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
-  
+  position: relative;
+  top: 70px;
+  left: 0px;
+  float: left;
+  /* overflow: hidden; */
 }
 
-div#coreValues_contents_card>span{
+ul#coreValues_contents_card{
+  width:600%;
+  height:120%;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+ul#coreValues_contents_card>li{
+  width: 1920px;
+  height: 970px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  /* overflow: hidden; */
+  float: left;
+
+}
+
+/* ul#coreValues_contents_card>li:nth-child(n+2){
+  display: none;
+} */
+
+ul#coreValues_contents_card>li>div{
   width: 410px;
   height: 618px; 
-  margin:0px auto; 
+  /* margin:0px auto;  */
   margin-top: 240px;
+ 
+}
+div.photo_wrap{
+  width: 410px;
+  height: 618px;
+  position: absolute;
+  left: 400px;
+  top: 0px;  
+}
+
+div.photo_wrap>img{
   border-radius: 10px;  
   background-color: #2209e3;
   box-shadow: 0px 4px 6px 6px rgba(0,0,0,0.25);
-  /* position: absolute;
-  top: 150px;
-  left: 50%;
-  margin-left: 205px; */
-  z-index: 999;
   transform-style: preserve-3d;
   transition: all 1s ease-out;
   backface-visibility: hidden;
-  
-}
-
-
-div#coreValues_contents_card>span>a>img{
   width: 100%;
-  /* position: absolute; */
+  position: absolute;
 }
 
-div#coreValues_contents_card_back{
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
-  margin-top: -100vh;
-  /* transform-style: preserve-3d;
-  transition: all 10s; */
+div.photo_wrap>img.front{
+  z-index: 9999;
 }
 
-div#coreValues_contents_card_back>span{
-  width: 410px;
-  height: 618px; 
-  /* object-fit: contain; */
-  margin:0px auto; 
-  margin-top: 240px;
-  border-radius: 10px;  
-  background-color: #2209e3;
-  /* background-color:red; */
-  /* box-shadow: 0px 4px 6px 6px rgba(0,0,0,0.25); */
-  /* position: absolute;
-  top: 150px;
-  left: 0px; */
-  transform-style: preserve-3d;
-  transition: all 1s ease-out;
-  /* backface-visibility: hidden; */
-
+div.photo_wrap>.showImage{
+  width: 1920px;
+  height: 970px;
+  position: absolute;
+  left: -650px;
+  top: -280px;
+  transform: scale(0);
+  /* display: none; */
 }
 
-div#coreValues_contents_card_back>span>a>img{
-  /* position: absolute; */
-  width: 100%;
+div#slide_btn{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  right: 200px;
+  bottom: 110px;
+  z-index: 999999;
+}
+button#prev_btn, button#next_btn{
+  background: none;
+  border: none;
+  font-size: 50px;
+}
+
+button#prev_btn{
+  margin-right: 30px;
 }
 /*poin_text 무한루트 코드*/
 div#core_values_point_wrap{
@@ -200,4 +212,39 @@ p.core_values_point_text{
   }
 }
 
+/* div#coreValues_contents_card_back{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: -100vh;
+  transform-style: preserve-3d;
+  transition: all 10s;
+}
 
+div#coreValues_contents_card_back>span{
+  width: 410px;
+  height: 618px; 
+  object-fit: contain;
+  margin:0px auto; 
+  margin-top: 240px;
+  border-radius: 10px;  
+  background-color: #2209e3;
+  background-color:red;
+  box-shadow: 0px 4px 6px 6px rgba(0,0,0,0.25);
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-out;
+  backface-visibility: hidden;
+
+}
+
+div#coreValues_contents_card_back>span>img{
+  position: absolute;
+  width: 100%;
+} */
