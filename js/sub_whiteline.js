@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.set(grayLayer, { display: 'block' });
     gsap.to(grayLayer, { opacity: 0.9, duration: 3, ease: 'power1.out' })
 
-    if(index>3){
-      index=-3
+    if(index>=3){
+      index=index-3
     }
     gsap.set(overLayer, { display: 'block' })
     overLayer.innerHTML = '<img src=/minjihaji_project/images/whiteline_contents_0' + (index) + '.jpg>'
