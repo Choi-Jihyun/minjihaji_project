@@ -104,52 +104,52 @@ window.addEventListener("load", ()=>{
     return selectedIndex;
   }
 
-  // function slideNextVisual(index){
-  //   currentIndex = (currentIndex + 1) % coreValuesCards.length;
-  //   gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
-  //   currentIndex = index;
-  // }
-
-  // function slidePrevVisual(index){
-  //   currentIndex = (currentIndex + 4) % coreValuesCards.length;
-  //     gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
-  //     currentIndex = index;
-  // }
   function slideNextVisual(index){
-    nextIndex = currentIndex + 1;
-      if(nextIndex >= cardLength){
-        nextIndex = 0;
-      }
-    // currentIndex = (currentIndex + 1) % coreValuesCards.length;
-
-    gsap.to(cardSlide[currentIndex], {left: 1920 * (cardLength - currentIndex), opacity: 0, duration: 1, ease: "power1.out"});
-
-      gsap.set(cardSlide[nextIndex], {left: -1920 * nextIndex});
-
-      gsap.to(cardSlide[nextIndex], {opacity: 1, duration: 1, ease: "power1.out"});
-
-    // gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
+    currentIndex = (currentIndex + 1) % coreValuesCards.length;
+    gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
     currentIndex = index;
   }
 
   function slidePrevVisual(index){
-    prevIndex = currentIndex - 1;
-      if(prevIndex < 0){
-        prevIndex = cardLength - 1;
-      }
-
-      // currentIndex = (currentIndex + 4) % coreValuesCards.length;
-
-      gsap.to(cardSlide[currentIndex], {left: 1920 * prevIndex, opacity: 0, duration: 1, ease: "power1.out"});
-
-      gsap.set(cardSlide[prevIndex], {left: -1920 * prevIndex});
-
-      gsap.to(cardSlide[prevIndex], {opacity: 1, duration: 1, ease: "power1.out"});
-
-    
-      // gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
+    currentIndex = (currentIndex + 4) % coreValuesCards.length;
+      gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
       currentIndex = index;
   }
+  // function slideNextVisual(index){
+  //   nextIndex = currentIndex + 1;
+  //     if(nextIndex >= cardLength){
+  //       nextIndex = 0;
+  //     }
+  //   // currentIndex = (currentIndex + 1) % coreValuesCards.length;
+
+  //   gsap.to(cardSlide[currentIndex], {left: 1920 * (cardLength - currentIndex), opacity: 0, duration: 1, ease: "power1.out"});
+
+  //     gsap.set(cardSlide[nextIndex], {left: -1920 * nextIndex});
+
+  //     gsap.to(cardSlide[nextIndex], {opacity: 1, duration: 1, ease: "power1.out"});
+
+  //   // gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
+  //   currentIndex = index;
+  // }
+
+  // function slidePrevVisual(index){
+  //   prevIndex = currentIndex - 1;
+  //     if(prevIndex < 0){
+  //       prevIndex = cardLength - 1;
+  //     }
+
+  //     // currentIndex = (currentIndex + 4) % coreValuesCards.length;
+
+  //     gsap.to(cardSlide[currentIndex], {left: 1920 * prevIndex, opacity: 0, duration: 1, ease: "power1.out"});
+
+  //     gsap.set(cardSlide[prevIndex], {left: -1920 * prevIndex});
+
+  //     gsap.to(cardSlide[prevIndex], {opacity: 1, duration: 1, ease: "power1.out"});
+
+    
+  //     // gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
+  //     currentIndex = index;
+  // }
 
 
 
@@ -183,12 +183,12 @@ window.addEventListener("load", ()=>{
                       gsap.to(item, {left: 850, top: 30, duration: 0.4, rotation: 10,});
                       gsap.to(item, {rotationY: -360, duration: 0.4, onComplete: ()=>{
                         showDetail();
-                        // gsap.set(item, {display: "none", onComplete: ()=>{
-                        //   // gsap.set(item, {display: "block", onComplete: ()=>{
-                        //   //   // removeshowDetail();
-                        //   // }})
+                        gsap.set(item, {display: "none", onComplete: ()=>{
+                          gsap.set(item, {display: "block", onComplete: ()=>{
+                            removeshowDetail();
+                          }})
                           
-                        // }})
+                        }})
                       }});
                     })
                   }})
