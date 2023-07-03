@@ -74,3 +74,81 @@ h1#logo_title {
   transition: color 0.4s ease-out;
 }
 
+div#position_bar{
+  width: 10px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 95px;
+  z-index: 500;
+}
+p#position_line{
+  width: 1px;
+  height: 100vh;
+  background-color: #42ff00;
+  position: absolute;
+  top: 0px;
+  left: 4px;
+}
+ul#position_ball{
+  width: 10px;
+  height: 140px;
+  position: absolute;
+  top: 400px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+ul#position_ball>li{
+  width: 7px;
+  height: 7px;
+  border: solid 1px #42ff00;
+  transform: rotate(45deg);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+ul#position_ball>li.selected{
+  background-color: #42ff00;
+}
+ul#position_text{
+  font:normal 15px/19px 'Sainte Colombe';
+  color: #42ff00;
+  transform: rotate(90deg);
+}
+#main_text{
+  position: absolute;
+  top: -30px;
+  left: 370px;
+  display: none;
+}
+#corevalues_text{
+  width: 87px;
+  height: 19px;
+  position: absolute;
+  top: -30px;
+  left: 409px;
+  display: none;
+}
+#ecofuturist_text{
+  width: 81px;
+  height: 19px;
+  position: absolute;
+  top: -30px;
+  left: 454px;
+  display: none;
+}
+#corelines_text{
+  width: 80px;
+  height: 19px;
+  position: absolute;
+  top: -30px;
+  left: 503px;
+  display: none;
+}
+ul#position_text>li.selected{
+  display: block;
+}
