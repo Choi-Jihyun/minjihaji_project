@@ -38,25 +38,33 @@ div#ecofuturist_svg_wrap {
 /* 참고할 사이트
 https://wsss.tistory.com/1310 */
 div#ecofuturist_text_svg {
-  width: 1600px;
-  height: 160px;
+  /* width: 1600px;
+  height: 160px; */
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 
   background-image: url('/minjihaji_project/images/ecofuturist_thumbnail.png');
   mask-image: url('/minjihaji_project/images/ecofuturist.svg');
   mask-repeat: no-repeat;
-  mask-position: 0px 0px; 
+  /* mask-position: 0px 0px;  */
+  mask-position: 50% 50%; 
   mask-size: 1600px 160px;
   -webkit-mask-image: url('/minjihaji_project/images/ecofuturist.svg'); 
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 0px 0px; 
+  /* -webkit-mask-position: 0px 0px;  */
+  -webkit-mask-position: 50% 50%; 
   -webkit-mask-size: 1600px 160px;
 
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   margin-left: -800px;
   top: 50%;
-  margin-top: -80px;
+  margin-top: -80px; */
+
+  position: relative;
+  left: 0px;
+  top: 0px;
   cursor: pointer;
 }
 video#ecofuturist_video{
@@ -66,6 +74,16 @@ video#ecofuturist_video{
   transform: translate(-50%, -50%);
   overflow:hidden;
 }
+span#ecofuturist_video_area {
+  width: 1600px;
+  height: 160px;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 div#logo_interaction_wrap {
   width: 100%;
   height: 150vh;

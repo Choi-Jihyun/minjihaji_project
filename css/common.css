@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 }
 /*로딩페이지*/
 div#loader{
-  position:relative;
+  position:absolute;
   width: 100vw;
   height: 100vh;
   background:#0B29C3;
