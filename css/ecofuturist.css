@@ -57,6 +57,7 @@ div#ecofuturist_text_svg {
   margin-left: -800px;
   top: 50%;
   margin-top: -80px;
+  cursor: pointer;
 }
 
 div#logo_interaction_wrap {
@@ -357,13 +358,28 @@ p.text_wrap {
   width: 1400px;
   height: 200px;
   font: normal 40px "Sainte Colombe";
-  color: white;
+  background: linear-gradient(45deg,#ffffff,#42FF00,#F3A9FF,#69FFED);
+  background-size:300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   text-align: center;
   position: relative;
   left: 50%;
   margin-left: -700px;
   top: 0px;
   padding-bottom: 70px;
+  animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 div#ecofuturist_article_logo {
