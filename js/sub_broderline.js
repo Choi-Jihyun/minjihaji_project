@@ -95,4 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.set(grayLayer,{display:'none'})
     }})
   }
+
+  const backButton = document.querySelector(".prev_btn");
+
+  backButton.addEventListener('click', back)
+  function back() {
+    history.back(); 
+  }
 })

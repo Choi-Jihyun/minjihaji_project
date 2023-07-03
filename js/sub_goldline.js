@@ -76,7 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.set(grayLayer, { display: 'block' });
     gsap.to(grayLayer, { opacity: 0.9, duration: 3, ease: 'power1.out' })
 
-    index=4-index
+    if(index>=0 && index<3){
+      index=index+2
+    }else if(index>=3){
+      index=index-1
+    }
     
     gsap.set(overLayer, { display: 'block' })
     overLayer.innerHTML = '<img src=/minjihaji_project/images/goldline_contents_0' + (index) + '.jpg>'
@@ -88,5 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to(grayLayer, { opacity: 0, duration: 0.3, ease: 'power1.out',onComplete:()=>{
       gsap.set(grayLayer,{display:'none'})
     }})
+  }
+
+  const backButton = document.querySelector(".prev_btn");
+
+  backButton.addEventListener('click', back)
+  function back() {
+    history.back(); 
   }
 })
