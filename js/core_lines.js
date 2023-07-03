@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+window.addEventListener('load', ()=>{
+  const coreLinesPage = document.querySelector("#core_lines_wrap");
   const titleCore2 = document.querySelector("#core");
   const titleLines = document.querySelector("#lines");
   const coreLinesLine = document.querySelector("#core_line_line > span");
@@ -9,15 +10,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   gsap.set(titleCore2, {display: 'none', opacity: 0, top: 100})
   gsap.set(titleLines, {display: 'none', opacity: 0, bottom: -100})
   gsap.set(coreLineCont, {display: 'none', opacity: 0, top: 580})
-  window.addEventListener('scroll', scrollCoreValues);
+  window.addEventListener('scroll', scrollCoreLines);
 
-  function scrollCoreValues() {
+  function scrollCoreLines() {
     let scrollHeight = window.scrollY;
-    let mainH = mainPage.clientHeight;
-    let cvH = coreValuesPage.clientHeight;
-    let efH = ecofuturistPage.clientHeight;
-    let eswH = ecofuturistSvgWrap.clientHeight;
-    if(scrollHeight > mainH+cvH+efH){
+
+    if(scrollHeight > window.innerHeight*5.4){
+      console.log(coreLinesPage.scrollTop);
+      console.log("작동 되는 중");
       gsap.set(titleCore2, {display: 'block'})
       gsap.to(titleCore2, {top: 0, opacity:1, duration: 1, ease: "power1.out", onComplete:()=>{
         gsap.to(coreLinesLine, {width: 848, duration: 1, onComplete: ()=>{
