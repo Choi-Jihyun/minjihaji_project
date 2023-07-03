@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 
     gsap.set($changeTitle, { display: 'block', top: 60 + 'px', left: -90 + 'px' })
     gsap.set(svgPath, {display: 'none'})
-    gsap.to($changeTitle.children[10], { left: 1509.88 + 'px', ease: 'power1.out', duration: logoDuration, delay: 0.2 })
+    gsap.to($changeTitle.children[10], { left: 1509.88 + 'px', ease: 'power1.out', duration: logoDuration, delay: 1 })
 
     gsap.to($mainTitle.children[11], { top: 76 + 'px', duration: logoDuration, delay: 1 })
     gsap.to($mainTitle.children[11], { left: 801.64 + 'px', duration: logoDuration, delay: 1.5 })

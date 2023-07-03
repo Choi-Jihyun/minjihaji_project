@@ -45,8 +45,8 @@ div#loading_img{
   top:49%;
   left:49%;
   transform: translate(-50%, -50%);
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {
