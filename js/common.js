@@ -121,7 +121,7 @@ window.addEventListener('load', ()=>{
   let endY; // 각 컨텐츠별 스크롤 끝나는 위치를 대입할 변수 
   let isWheel=false; // 휠 상태변수 지정 (초기값 false 지정)
 
-  window.addEventListener('scroll', changeLogoColor);
+  // window.addEventListener('scroll', changeLogoColor);
   window.addEventListener('wheel', windowWheel)
   
   function changeLogoColor() {

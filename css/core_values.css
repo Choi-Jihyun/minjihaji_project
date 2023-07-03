@@ -54,7 +54,7 @@ p#core_values_line{
   width: 848px;
   height: 1px;
   position: absolute;
-  top:265px;
+  top:325px;
   left: 720px;
 }
 p#core_values_line span {
@@ -70,7 +70,7 @@ p#core_values_star{
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 250px;
+  top: 310px;
   right: 309px;
 }
 
