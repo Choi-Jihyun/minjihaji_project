@@ -206,12 +206,14 @@ div#title {
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_E{
       width: 58.49px;
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_G{
       width: 64px;
@@ -230,24 +232,28 @@ div#title {
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_E3{
       width: 58.49px;
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_R2{
       width: 66.62px;
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_A{
       width: 62px;
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_T{
       width: 53px;
@@ -260,6 +266,7 @@ div#title {
       position: absolute;
       top: 0px;
       left: 0px;
+      display: none;
     }
     span#regenerated_D{
       width: 64px;
