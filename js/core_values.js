@@ -46,7 +46,7 @@ window.addEventListener("load", ()=>{
   gsap.set(titleValue, {display: 'none', opacity: 0, bottom: -11})
   gsap.set(coreValuesText, {display: 'none', opacity: 0, bottom: -100})
   gsap.set(coreValuesCards, {left: 2000})
-  gsap.set(showPhoto, {display: "none", scale: 0});
+  gsap.set(showPhoto, {display: "none", scale: (0, 0), opacity: 0});
   // gsap.set(coreValuesCardsBack, {left: 2000})
   // gsap.set(coreValuesCardsBack, {left: 1200, display: 'none'})
   window.addEventListener('scroll', scrollCoreValues);
@@ -66,9 +66,9 @@ window.addEventListener("load", ()=>{
   function showDetail(){
     for(const item of showPhoto){
       gsap.set(item, {display: "block"});
-      gsap.to(item, {duration: 1, scale: 1, rotation: 0, left: 0, top: 0, ease: "power1.out", onComplete: ()=>{
+      gsap.to(item, {duration: 1, scale: (1, 1), opacity: 1, rotation: 0, left: 0, top: 300, ease: "power1.out", onComplete: ()=>{
         item.addEventListener("click", ()=>{
-          gsap.set(item, {display: "none"})
+          removeshowDetail();
         })
       }})
     }
@@ -76,7 +76,7 @@ window.addEventListener("load", ()=>{
   
   function removeshowDetail(){
     for(const item of showPhoto){
-      gsap.set(item, {display: "none"});
+      gsap.set(item, {display: "none", scale: (0, 0), opacity: 0 });
     }
   }
     function addCardIndex(){
@@ -183,9 +183,9 @@ window.addEventListener("load", ()=>{
                       gsap.to(item, {left: 850, top: 30, duration: 0.4, rotation: 10,});
                       gsap.to(item, {rotationY: -360, duration: 0.4, onComplete: ()=>{
                         showDetail();
-                        gsap.set(item, {display: "none", onComplete: ()=>{
-                          gsap.set(item, {display: "block", onComplete: ()=>{
-                            removeshowDetail();
+                        gsap.to(item, {display: "none", onComplete: ()=>{
+                          gsap.to(item, {display: "block", onComplete: ()=>{
+                            // removeshowDetail();
                           }})
                           
                         }})
