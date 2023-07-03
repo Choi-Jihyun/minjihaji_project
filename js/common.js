@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
      setTimeout(()=>{
            loader.style.display = 'none';
        },200);
-   },4000);
+   },2000);
   
   $positionBallLi=document.querySelectorAll('#position_ball>li')
   $positionBallText=document.querySelectorAll('#position_text>li')
