@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded',()=>{
+     //로딩페이지
+     const loader = document.querySelector('#loader');
+     const html = document.querySelector('html');
+   
+     html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
+     setTimeout(()=>{
+     loader.style.opacity = '0';
+     html.style.overflow = 'auto'; //스크롤 방지 해제
+     setTimeout(()=>{
+           loader.style.display = 'none';
+       },200);
+   },4000);
+  
   $positionBallLi=document.querySelectorAll('#position_ball>li')
   $positionBallText=document.querySelectorAll('#position_text>li')
   $positionBar=document.querySelector('#position_bar')

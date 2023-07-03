@@ -32,6 +32,32 @@ body{
 body::-webkit-scrollbar {  
   display: none; 
 }
+/*로딩페이지*/
+div#loader{
+  position:relative;
+  width: 100vw;
+  height: 100vh;
+  background:#0B29C3;
+  z-index:1000;
+}
+div#loading_img{
+  position:absolute;
+  top:49%;
+  left:49%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* 지현 */
 div#header_bar {
@@ -41,7 +67,7 @@ div#header_bar {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10000;
+  z-index: 999;
 }
 
 div#logo {
@@ -55,7 +81,7 @@ div#logo {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 div#logo img {
