@@ -12,6 +12,7 @@ window.addEventListener("load", ()=>{
   const titleCore = document.querySelector("#title_core");
   const titleValue = document.querySelector("#title_values");
   const coreValuesText = document.querySelector("#core_values_text");
+  const slideBtn = document.querySelector("#slide_btn");
   const prevBtn = document.querySelector("#prev_btn");
   const nextBtn = document.querySelector("#next_btn");
   const showPhoto = document.querySelectorAll(".showImage");
@@ -46,10 +47,12 @@ window.addEventListener("load", ()=>{
 
   function showDetail(){
     for(const item of showPhoto){
+      gsap.to(slideBtn, {opacity: 0, duration: 0.6})
       gsap.set(item, {display: "block"});
       gsap.to(item, {duration: 1, scale: (1, 1), opacity: 1, rotation: 0, left: 0, top: 300, ease: "power1.out", onComplete: ()=>{
         item.addEventListener("click", ()=>{
           removeshowDetail();
+          slideBtn.style.opacity = 1
         })
       }})
     }

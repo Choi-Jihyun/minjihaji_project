@@ -138,7 +138,6 @@ div.photo_wrap>.showImage{
   position: absolute;
   left: 0px;
   top: 0px;
-  transform: scale(0);
   display: none;
 }
 
@@ -148,7 +147,7 @@ div#slide_btn{
   position: absolute;
   right: 200px;
   bottom: 110px;
-  z-index: 0;
+  z-index: 10;
 }
 button#prev_btn {
   width: 50px; 
@@ -157,6 +156,7 @@ button#prev_btn {
   border: none;
   cursor: pointer;
   margin-right: 10px;
+  position: relative;
 }
 button#next_btn {
   width: 50px; 
