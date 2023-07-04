@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     top: 93.4+'vh',
     scrollTrigger: {
       trigger: logoInteractionWrap,
-      markers: true,
+      // markers: true,
       start: 'top -10%',
       end: 'bottom 120%', 
       scrub: 1,

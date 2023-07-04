@@ -165,25 +165,19 @@ window.addEventListener('load', ()=>{
     if(e.wheelDelta <= -120 && currentPageNum < pageLength - 1 && isWheel == false && currentPageNum != 3) {
       isWheel = true;
       currentPageNum++;
-      console.log(currentPageNum);
       scrollSlide_ww(currentPageNum)
     } else if(e.wheelDelta > -120 && currentPageNum > 0 && isWheel == false) {
       isWheel = true;                     
       currentPageNum--;            
-      console.log(currentPageNum);
       scrollSlide_ww(currentPageNum)
     } else if(currentPageNum == 3) {
-      console.log(window.scrollY);
       isWheel = true;
-      console.log(mainH+cvH+eswH);
       if(window.scrollY > mainH+cvH+eswH+500){
         currentPageNum = 4;
-        console.log(currentPageNum);
         scrollSlide_ww(currentPageNum)
       }
       if(window.scrollY < mainH+cvH+eswH-600){
         currentPageNum = 2;
-        console.log(currentPageNum);
         scrollSlide_ww(currentPageNum)
       }
     }
