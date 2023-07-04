@@ -20,6 +20,7 @@ div#eco_blue_bg {
   position: relative;
   left: 0px;
   right: 0px;
+  background:green;
 }
 
 div#ecofuturist_svg_wrap {
@@ -27,6 +28,7 @@ div#ecofuturist_svg_wrap {
   height: 100vh;
   position: relative;
   left: 0px;
+  top: 0px;
 }
 
 div#ecofuturist_text_svg {

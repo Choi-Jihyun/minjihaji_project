@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
   }
   function scrollWindow(){
-    let scrollHeight=window.pageYOffset;
+    let scrollHeight=window.scrollY;
 
     if(scrollHeight>=windowHeight/2 && scrollHeight<windowHeight*1.5){
       checkMenu=1;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 })
 
-// 스크롤 시 로고 변경과 페이지 붙기
+// 스크롤 시 로고 변경과 페이지 붙기 + 포지션 바 색상 변경
 window.addEventListener('load', ()=>{
   const fixedLogo = document.querySelector("#logo > img");
   const logoTitle = document.querySelector("#logo_title");
@@ -104,6 +104,12 @@ window.addEventListener('load', ()=>{
   const logoInteractionWrap = document.querySelector("#logo_interaction_wrap");
   const coreLinesPage = document.querySelector("#core_lines");
   const subLinesPage = document.querySelector("#main_wrap");
+
+  const positionLine = document.querySelector("#position_line");
+  // const positionBallLi = document.querySelectorAll("#position_ball > li");
+  const positionBallLiSelected = document.querySelectorAll("#position_ball > li.selected");
+  const positionText = document.querySelector("#position_text");
+
   
   let scrollH = window.scrollY;
   let mainH = mainPage.clientHeight;
@@ -121,18 +127,35 @@ window.addEventListener('load', ()=>{
   let endY; // 각 컨텐츠별 스크롤 끝나는 위치를 대입할 변수 
   let isWheel=false; // 휠 상태변수 지정 (초기값 false 지정)
 
-  // window.addEventListener('scroll', changeLogoColor);
+  // window.addEventListener('wheel', changeLogoColor);
+  setInterval(changeLogoColor, 100)
   window.addEventListener('wheel', windowWheel)
   
   function changeLogoColor() {
     scrollH = window.scrollY;
 
-    if((scrollH < mainH - 40) || ( scrollH > mainH + cvH + eiwH + 500 && scrollH < mainH + cvH + efH + clH - 20)) {
+    if((scrollH < mainH - 40) || ( scrollH > pageHeight[3] + 500 && scrollH < pageHeight[6] - 20)) {
       logoTitle.style.color = "#42ff00"
       fixedLogo.style.filter = "none"
+      // positionLine.style.backgroundColor = "#42ff00"
+      // for(item of $positionBallLi) {
+      //   item.style.borderColor = "#42ff00"
+      // }
+      // for(item of positionBallLiSelected) {
+      //   item.style.backgroundColor = "#42ff00"
+      // }
+      // positionText.style.color = "#42ff00"
     } else {
       logoTitle.style.color = "black"
       fixedLogo.style.filter = "grayscale(100%) brightness(0)"
+    //   positionLine.style.backgroundColor = "#2209e3"
+    //   for(item of $positionBallLi) {
+    //     item.style.borderColor = "#2209e3"
+    //   }
+    //   for(item of positionBallLiSelected) {
+    //     item.style.backgroundColor = "#2209e3"
+    //   }
+    //   positionText.style.color = "#2209e3"
     }
     
   }
