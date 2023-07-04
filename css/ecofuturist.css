@@ -368,6 +368,7 @@ p.text_wrap {
   font: bold 40px "Sainte Colombe";
   background: linear-gradient(45deg,#ffffff,#42FF00,#F3A9FF,#69FFED);
   background-size:300%;
+  background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   text-align: center;

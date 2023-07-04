@@ -93,14 +93,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   })
 
-
-  let logo = document.querySelector("#ecofuturist_article_logo");
-
+  // 이스터 에그
+  const logo = document.querySelector("#ecofuturist_article_logo");
   let screenWidth = window.innerWidth;
   let screenHeight = window.innerHeight;
-
-  // let xPos = Math.random() * (screenWidth - logo.offsetWidth);
-  // let yPos = Math.random() * (screenHeight - logo.offsetHeight);
   let xPos = 970
   let yPos = 800
 
@@ -110,16 +106,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   function moveLogo() {
       xPos += xSpeed;
       yPos += ySpeed;
-      
       if (xPos < 0 || xPos > screenWidth - logo.offsetWidth) {
           xSpeed *= -1;
       }
-      
       if (yPos < 0 || yPos > screenHeight - logo.offsetHeight) {
           ySpeed *= -1;
       }
       logo.style.left = xPos -170 +"px";
-      logo.style.top = yPos + "px";
+      logo.style.top = yPos -50 + "px";
   }
 
   gsap.to(logoTexts, {
@@ -135,15 +129,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
       gsap.to(logoTexts, {display: 'none', duration: 0.2})
     }
   })
-
-  // 지현 -> 스크롤하면 로고 돌아가는 거
-  // window.addEventListener('scroll', scrollLogoAnimate);
-  // function scrollLogoAnimate() {
-  //   let scrollHeight = window.scrollY + window.innerHeight;
-  //   gsap.to(logoGlobeSpin, {transform: `rotateY(${scrollHeight*2}deg)`})
-  // }
-  
-
-
-
 })
