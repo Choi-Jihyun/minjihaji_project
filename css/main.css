@@ -1,5 +1,4 @@
 /* 지혜 */
-/*[지혜수정_0627]*/
 #wrap{
   width: 100%;
   height: auto;
@@ -55,9 +54,7 @@ div#logo_svg_wrap {
 }
 
 .svg_logo {
-  /* stroke-dasharray: 980; */
   stroke-dasharray: 1700;
-  /* stroke-dashoffset: 720; */
   stroke: #42ff00;
   stroke-width: 1px;
   display:none;
@@ -180,7 +177,6 @@ div#title {
     }
 
     div#changeTitle {
-      font: bold 76px/76px 'Sainte Colombe';
       font: bold 76px/76px 'Sainte Colombe';
       color: white;
       display: none;
