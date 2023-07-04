@@ -63,21 +63,43 @@ document.addEventListener('DOMContentLoaded', ()=>{
   })
 
   // 로고 스핀
-  let rotationGlobe = 100;
-  let speedGlobe = 20;
+  const animation = {
+    rotationGlobe: 100,
+    speedGlobe: 20,
+  
+    LogoSpin() {
+      setInterval(this.logoGlobeAnimate.bind(this), 100);
+      setInterval(this.logoSpinWrapAnimate.bind(this), 100);
+    },
+  
+    logoGlobeAnimate() {
+      this.rotationGlobe += this.speedGlobe;
+      logoGlobeSpin.style.transform = `rotateY(${this.rotationGlobe}deg)`;
+    },
+  
+    logoSpinWrapAnimate() {
+      this.rotationGlobe += this.speedGlobe;
+      logoSpinWrap.style.transform = `rotateY(${this.rotationGlobe}deg)`;
+    }
+  };
+  animation.LogoSpin();
+  // let rotationGlobe = 100;
+  // let speedGlobe = 20;
 
-  let lgAniTimer = setInterval(logoGlobeAnimate, 100);
-  let lswAniTimer = setInterval(logoSpinWrapAnimate, 100);
-  document.addEventListener('click', moreFaster)
+  // setInterval(logoGlobeAnimate, 100);
+  // setInterval(logoSpinWrapAnimate, 100);
+  
+  // function logoGlobeAnimate() {
+  //   rotationGlobe += speedGlobe;
+  //   logoGlobeSpin.style.transform = `rotateY(${rotationGlobe}deg)`;
+  // }
+  // function logoSpinWrapAnimate() {
+  //   rotationGlobe += speedGlobe;
+  //   logoSpinWrap.style.transform = `rotateY(${rotationGlobe}deg)`;
+  // }
 
-  function logoGlobeAnimate() {
-    rotationGlobe += speedGlobe;
-    logoGlobeSpin.style.transform = `rotateY(${rotationGlobe}deg)`;
-  }
-  function logoSpinWrapAnimate() {
-    rotationGlobe += speedGlobe;
-    logoSpinWrap.style.transform = `rotateY(${rotationGlobe}deg)`;
-  }
+
+  ecofuturistArticleWrap.addEventListener('click', moreFaster)
   function moreFaster() {
     speedGlobe = 100;
     setInterval(moveLogo, 10);
