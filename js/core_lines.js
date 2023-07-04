@@ -16,8 +16,6 @@ window.addEventListener('load', ()=>{
     let scrollHeight = window.scrollY;
 
     if(scrollHeight > window.innerHeight*5.4){
-      console.log(coreLinesPage.scrollTop);
-      console.log("작동 되는 중");
       gsap.set(titleCore2, {display: 'block'})
       gsap.to(titleCore2, {top: 0, opacity:1, duration: 1, ease: "power1.out", onComplete:()=>{
         gsap.to(coreLinesLine, {width: 848, duration: 1, onComplete: ()=>{
