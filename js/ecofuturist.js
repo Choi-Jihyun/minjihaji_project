@@ -1,6 +1,7 @@
-// // 지현
+// 지현
 document.addEventListener('DOMContentLoaded', ()=>{
   const logoInteractionWrap = document.querySelector("#logo_interaction_wrap");
+  const ecofuturistArticleWrap = document.querySelector("#ecofuturist_article_wrap");
   const brick = document.querySelector("#brick");
   const logoGlobe =document.querySelector("#logo_globe")
   const logoGlobeSpin = document.querySelector("#logo_globe_spin");
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         ease: CustomEase.create("custom", "M0,0 C0.176,-0.152 0.374,0.306 0.507,0.512 0.652,0.738 0.852,1.152 1,1 "),
         repeat: -1,
         yoyo: true,
-        delay: index * 0.3 // 0.5초마다 요소들이 움직이도록 함
+        delay: index * 0.3
       })
     });
   }
@@ -61,14 +62,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   })
 
+  // 로고 스핀
   let rotationGlobe = 100;
   let speedGlobe = 20;
 
-  setInterval(animate, 100);
+  let lgAniTimer = setInterval(logoGlobeAnimate, 100);
+  let lswAniTimer = setInterval(logoSpinWrapAnimate, 100);
+  document.addEventListener('click', moreFaster)
 
-  function animate() {
+  function logoGlobeAnimate() {
     rotationGlobe += speedGlobe;
     logoGlobeSpin.style.transform = `rotateY(${rotationGlobe}deg)`;
+  }
+  function logoSpinWrapAnimate() {
+    rotationGlobe += speedGlobe;
+    logoSpinWrap.style.transform = `rotateY(${rotationGlobe}deg)`;
+  }
+  function moreFaster() {
+    speedGlobe = 100;
+    setInterval(moveLogo, 10);
   }
   
   gsap.to(logoGlobeSpin, {
@@ -80,6 +92,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
       scrub: 1,
     }
   })
+
+
+  let logo = document.querySelector("#ecofuturist_article_logo");
+
+  let screenWidth = window.innerWidth;
+  let screenHeight = window.innerHeight;
+
+  // let xPos = Math.random() * (screenWidth - logo.offsetWidth);
+  // let yPos = Math.random() * (screenHeight - logo.offsetHeight);
+  let xPos = 970
+  let yPos = 800
+
+  let xSpeed = 2;
+  let ySpeed = 2;
+
+  function moveLogo() {
+      xPos += xSpeed;
+      yPos += ySpeed;
+      
+      if (xPos < 0 || xPos > screenWidth - logo.offsetWidth) {
+          xSpeed *= -1;
+      }
+      
+      if (yPos < 0 || yPos > screenHeight - logo.offsetHeight) {
+          ySpeed *= -1;
+      }
+      logo.style.left = xPos -170 +"px";
+      logo.style.top = yPos + "px";
+  }
 
   gsap.to(logoTexts, {
     top: 140+'vh',
@@ -106,6 +147,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 })
-
-
-// 하이
