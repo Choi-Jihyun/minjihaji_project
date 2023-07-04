@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded',()=>{
-     //로딩페이지
-     const loader = document.querySelector('#loader');
-     const html = document.querySelector('html');
-   
-     html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
-     setTimeout(()=>{
-     loader.style.opacity = '0';
-     html.style.overflow = 'auto'; //스크롤 방지 해제
-     setTimeout(()=>{
-           loader.style.display = 'none';
-       },200);
-   },1000);
+    //로딩페이지
+    const loader = document.querySelector('#loader');
+    const html = document.querySelector('html');
+  
+    html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
+    setTimeout(()=>{
+    loader.style.opacity = '0';
+    html.style.overflow = 'auto'; //스크롤 방지 해제
+    setTimeout(()=>{
+          loader.style.display = 'none';
+      },200);
+  },1000);
   
   $positionBallLi=document.querySelectorAll('#position_ball>li')
   $positionBallText=document.querySelectorAll('#position_text>li')
@@ -104,12 +104,6 @@ window.addEventListener('load', ()=>{
   const logoInteractionWrap = document.querySelector("#logo_interaction_wrap");
   const coreLinesPage = document.querySelector("#core_lines");
   const subLinesPage = document.querySelector("#main_wrap");
-
-  const positionLine = document.querySelector("#position_line");
-  // const positionBallLi = document.querySelectorAll("#position_ball > li");
-  const positionBallLiSelected = document.querySelectorAll("#position_ball > li.selected");
-  const positionText = document.querySelector("#position_text");
-
   
   let scrollH = window.scrollY;
   let mainH = mainPage.clientHeight;
@@ -124,11 +118,11 @@ window.addEventListener('load', ()=>{
   let pageHeight = [0, mainH, mainH+cvH,  mainH+cvH+eswH, mainH+cvH+eswH+eiwH, mainH+cvH+eswH+eiwH+eawH, mainH+cvH+eswH+eiwH+eawH+clH]
   let pageLength = pageHeight.length;
   let currentPageNum = 0;
-  let endY; // 각 컨텐츠별 스크롤 끝나는 위치를 대입할 변수 
-  let isWheel=false; // 휠 상태변수 지정 (초기값 false 지정)
+  let endY;
+  let isWheel = false;
 
   // window.addEventListener('wheel', changeLogoColor);
-  setInterval(changeLogoColor, 100)
+  let changeLogoColorTimer = setInterval(changeLogoColor, 100)
   window.addEventListener('wheel', windowWheel)
   
   function changeLogoColor() {
@@ -137,25 +131,9 @@ window.addEventListener('load', ()=>{
     if((scrollH < mainH - 40) || ( scrollH > pageHeight[3] + 500 && scrollH < pageHeight[6] - 20)) {
       logoTitle.style.color = "#42ff00"
       fixedLogo.style.filter = "none"
-      // positionLine.style.backgroundColor = "#42ff00"
-      // for(item of $positionBallLi) {
-      //   item.style.borderColor = "#42ff00"
-      // }
-      // for(item of positionBallLiSelected) {
-      //   item.style.backgroundColor = "#42ff00"
-      // }
-      // positionText.style.color = "#42ff00"
     } else {
       logoTitle.style.color = "black"
       fixedLogo.style.filter = "grayscale(100%) brightness(0)"
-    //   positionLine.style.backgroundColor = "#2209e3"
-    //   for(item of $positionBallLi) {
-    //     item.style.borderColor = "#2209e3"
-    //   }
-    //   for(item of positionBallLiSelected) {
-    //     item.style.backgroundColor = "#2209e3"
-    //   }
-    //   positionText.style.color = "#2209e3"
     }
     
   }
