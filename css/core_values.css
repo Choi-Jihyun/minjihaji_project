@@ -181,7 +181,7 @@ div#core_values_point_wrap{
   bottom: 10px;
   overflow: hidden;
 }
-section#core_values_point{
+div#core_values_point{
   width: 200%;
   height: 100%;
   position: absolute;
