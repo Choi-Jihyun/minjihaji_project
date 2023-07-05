@@ -123,7 +123,7 @@ window.addEventListener('load', ()=>{
 
   // window.addEventListener('wheel', changeLogoColor);
   let changeLogoColorTimer = setInterval(changeLogoColor, 100)
-  window.addEventListener('wheel', windowWheel)
+  // window.addEventListener('wheel', windowWheel)
   
   function changeLogoColor() {
     scrollH = window.scrollY;
