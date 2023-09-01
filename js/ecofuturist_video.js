@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',()=>{
           gsap.set(evarea, {display: "none"})
         }})
     }else{
-      gsap.to(ecofuturistTextSvg,{maskImage:'url("/minjihaji_project/images/ecofuturist.svg")',webkitMaskImage:'url("/minjihaji_project/images/ecofuturist.svg")',duration:1, onComplete:()=>{
+      gsap.to(ecofuturistTextSvg,{maskImage:'url("/images/ecofuturist.svg")',webkitMaskImage:'url("/images/ecofuturist.svg")',duration:1, onComplete:()=>{
         gsap.set(evarea, {display: "block"})
       }})
     }

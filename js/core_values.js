@@ -90,16 +90,16 @@ window.addEventListener("load", ()=>{
 
   function slideNextVisual(index){
     if(currentIndex == cardLength - 1) {
-      nextBtn.innerHTML = "<img src='/minjihaji_project/images/next_btn_none.png'>";
+      nextBtn.innerHTML = "<img src='/images/next_btn_none.png'>";
       nextBtn.style.cursor = 'default';
     } else {
-      prevBtn.innerHTML = "<img src='/minjihaji_project/images/prev_btn.png'>";
+      prevBtn.innerHTML = "<img src='/images/prev_btn.png'>";
       prevBtn.style.cursor = 'pointer';
       currentIndex = (currentIndex + 1) % coreValuesCards.length;
       gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
       currentIndex = index;
       if(currentIndex == cardLength - 1){
-        nextBtn.innerHTML = "<img src='/minjihaji_project/images/next_btn_none.png'>";
+        nextBtn.innerHTML = "<img src='/images/next_btn_none.png'>";
         nextBtn.style.cursor = 'default';
       }
     }
@@ -107,16 +107,16 @@ window.addEventListener("load", ()=>{
 
   function slidePrevVisual(index){
     if(currentIndex == 0) {
-      prevBtn.innerHTML = "<img src='/minjihaji_project/images/prev_btn_none.png'>";
+      prevBtn.innerHTML = "<img src='/images/prev_btn_none.png'>";
       prevBtn.style.cursor = 'default';
     } else {
-      nextBtn.innerHTML = "<img src='/minjihaji_project/images/next_btn.png'>";
+      nextBtn.innerHTML = "<img src='/images/next_btn.png'>";
       nextBtn.style.cursor = 'pointer';
       currentIndex = (currentIndex + 4) % coreValuesCards.length;
       gsap.to(cardSlide, {duration: 1.6, x: -1920 * currentIndex});
       currentIndex = index;
       if(currentIndex == 0) {
-        prevBtn.innerHTML = "<img src='/minjihaji_project/images/prev_btn_none.png'>";
+        prevBtn.innerHTML = "<img src='/images/prev_btn_none.png'>";
         prevBtn.style.cursor = 'default';
       }
     }

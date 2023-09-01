@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to(grayLayer, { opacity: 0.9, duration: 3, ease: 'power1.out' })
 
     gsap.set(overLayer, { display: 'block' })
-    overLayer.innerHTML = '<img src=/minjihaji_project/images/goldline_contents_0' + (index) + '.jpg>'
+    overLayer.innerHTML = '<img src=/images/goldline_contents_0' + (index) + '.jpg>'
     gsap.to(overLayer, { scale: 1, duration: 0.3, ease: 'power1.out' })
   }
   function showRightImg(index){
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     gsap.set(overLayer, { display: 'block' })
-    overLayer.innerHTML = '<img src=/minjihaji_project/images/goldline_contents_0' + (index) + '.jpg>'
+    overLayer.innerHTML = '<img src=/images/goldline_contents_0' + (index) + '.jpg>'
     gsap.to(overLayer, { scale: 1, duration: 0.3, ease: 'power1.out' })
   }
 

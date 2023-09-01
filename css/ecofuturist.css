@@ -36,12 +36,12 @@ div#ecofuturist_text_svg {
   height: 100%;
   margin: 0 auto;
 
-  background-image: url('/minjihaji_project/images/ecofuturist_thumbnail.png');
-  mask-image: url('/minjihaji_project/images/ecofuturist.svg');
+  background-image: url('/images/ecofuturist_thumbnail.png');
+  mask-image: url('/images/ecofuturist.svg');
   mask-repeat: no-repeat;
   mask-position: 50% 50%; 
   mask-size: 1600px 160px;
-  -webkit-mask-image: url('/minjihaji_project/images/ecofuturist.svg'); 
+  -webkit-mask-image: url('/images/ecofuturist.svg'); 
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 50% 50%; 
   -webkit-mask-size: 1600px 160px;
@@ -239,19 +239,19 @@ div#hole_back {
 }
 .waveTop {
   background-size: 50% 130px;
-  background-image: url('/minjihaji_project/images/wave_top.png');
+  background-image: url('/images/wave_top.png');
   animation: move_wave 5s linear infinite;
   -webkit-animation: move_wave 5s linear infinite;
 }
 .waveMiddle {
   background-size: 50% 150px;
-  background-image: url('/minjihaji_project/images/wave_mid.png');
+  background-image: url('/images/wave_mid.png');
   animation: move_wave 10s linear infinite;
   -webkit-animation: move_wave 10s linear infinite;
 }
 .waveBottom {
   background-size: 50% 200px;
-  background-image: url('/minjihaji_project/images/wave_bot.png');
+  background-image: url('/images/wave_bot.png');
   animation: move_wave 15s linear infinite;
   -webkit-animation: move_wave 15s linear infinite;
 }

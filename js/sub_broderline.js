@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       index=-3
     }
     gsap.set(overLayer, { display: 'block' })
-    overLayer.innerHTML = '<img src=/minjihaji_project/images/broderline_contents_0' + (index) + '.jpg>'
+    overLayer.innerHTML = '<img src=/images/broderline_contents_0' + (index) + '.jpg>'
     gsap.to(overLayer, { scale: 1, duration: 0.3, ease: 'power1.out' })
   }
   function showRightImg(index){
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       index=index+1
     }
     gsap.set(overLayer, { display: 'block' })
-    overLayer.innerHTML = '<img src=/minjihaji_project/images/broderline_contents_0' + (index) + '.jpg>'
+    overLayer.innerHTML = '<img src=/images/broderline_contents_0' + (index) + '.jpg>'
     gsap.to(overLayer, { scale: 1, duration: 0.3, ease: 'power1.out' })
   }
 
