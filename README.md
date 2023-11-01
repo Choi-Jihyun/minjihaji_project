@@ -14,14 +14,10 @@
 WebSite |  http://osungcjh.dothome.co.kr/minjihaji_project/
 
 ## 💁🏻‍♀️팀소개
-#Leader 
-최지현
-#Designer 
-정민주
-#Front-End Developer 
-김하정
-#Front-End Developer 
-최지혜
+**Leader** 최지현
+**Designer** 정민주
+**Front-End Developer** 김하정
+**Front-End Developer** 최지혜
 
 ## 📜 프로젝트개요
 
