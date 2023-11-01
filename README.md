@@ -13,6 +13,12 @@
 
 WebSite |  http://osungcjh.dothome.co.kr/minjihaji_project/
 
+## 💁🏻‍♀️팀소개
+#leader 최지현
+#Designer 정민주
+#Front-End Developer 김하정
+#Front-End Developer 최지혜
+
 ## 📜 프로젝트개요
 
 프로젝트는 '민지하지팀'이라는 이름으로 진행되었으며, 팀명은 팀원들의 이름 두 번째 글자를 조합하여 만들었습니다. 이 프로젝트의 목적은 환경 보호에 중점을 둔 패션 브랜드 '마린세르'를 소개하고, 그들의 지속 가능한 패션에 대한 메시지를 전달하는 것입니다.
